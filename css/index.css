@@ -1,15 +1,20 @@
 *{
     list-style: none;
+    padding: 0;
 }
 
 body{
-    position: absolute;
+    /* background-color: rgb(253, 249, 249); */
 }
-
-.header-nav{
-    position: relative;
+.header{
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
+    z-index: 0;
+    background-color: white;
+}
+.header-nav{
     box-sizing: border-box;
     box-shadow: .1em .1em 1rem .1rem grey;
     padding: .5em;
@@ -43,3 +48,62 @@ body{
 .filter-panel{
     display: none;
 }
+.main{
+    margin-top: 5em;
+}
+.product h3{
+    font-size: 1.5em;
+}
+.product-form li{
+    display: inline-block;
+}
+
+.swatches {
+    display: inline-block;
+  }
+  
+  .swatches li {  /* Lineup the list in a single row */
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .product-color {  /* Ensure labels take up the whole element space */
+    display: block;
+    position: relative;
+  }
+  
+  .product-color span { /* Style the squares using the span element */
+    display: block;
+    border: 2px solid transparent;
+    color: transparent;
+    height: 2em;
+    width: 2em;
+    cursor: pointer;
+  }
+  
+  .product-color input {  /* Hide the radio buttons. TRY COMMENTING THESE PROPERTIES! */
+    position: absolute;
+    opacity: 0;
+    /* display: none; */
+  }
+      /* Note: The <input> can also be hidden with display:none, but using opacity
+      may make it more accessible, as native devices will ignore a non-displaying
+      element. But opacity may allow native functionality, even if invisible. */
+  
+  .product-color input:checked + span {  /* When <input> within .product-color is :checked, put a border on the <span> that IMMEDIATELY follows it (+) */
+    border: 2px solid #222; 
+  }
+      /* Note: This becomes a less obvious managed dependancy. The <span> now
+      must always come immediately after the <input> in the HTML document. The
+      "+" is used to express "the sibling that immediately follows" */
+  
+  /* Add the colours */
+  .product-color.red { background-color: tomato; }
+  .product-color.blue { background-color: dodgerblue; }
+  .product-color.white { background-color: white; }
+
+  .product-color-sizes{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: left;
+  }
