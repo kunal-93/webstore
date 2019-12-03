@@ -52,10 +52,6 @@ let productList =  [
         }
     ]
 
-const getImagePath = (raw_string) => {
-    console.log(`${raw_string.slice(1,-1)}`);
-};
-
 const getProductAsHTML = (product) => {
 
     return `
@@ -103,4 +99,5 @@ const getProductAsHTML = (product) => {
 window.addEventListener("load", () => {
     const productsSection = document.getElementById("products");
     productsSection.innerHTML += productList.map(getProductAsHTML);
-});
+});  
+  
