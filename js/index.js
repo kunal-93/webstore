@@ -6,12 +6,12 @@ let productList =  [
             "description" : ["Windows 10 Home", "Intel® Core™ i5-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
                             "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 899.99,
-            "quantity" : 10,
+            "quantity" :  2,
             "category" : "laptop",
             "type" : "Regular",
             "screenSize" : "23.8",
             "color" : ["Silver", "Black"],
-            "rating": 4.4,
+            "rating": 3.4,
             "ratingCount" : 200
         },
         {
@@ -60,6 +60,7 @@ let productList =  [
         }
     ]
 
+// Utility Functions
 const getProductStatusbyQtyAsHTML = (quantity) => {
     let colorClass = null;
     let stockStatus = null;
@@ -82,6 +83,20 @@ const getProductStatusbyQtyAsHTML = (quantity) => {
 const getProductDescriptionAsListItems = (descriptionPoint) => {
     return `<li>${descriptionPoint}</li>`;
 }
+
+const getProductRatingAsHTML = (rating) => {
+    const fractPart = rating - Math.floor(rating);
+    const decimalPart = Math.floor(rating);
+    let starSpan = ``;
+    for(let i=0; i<decimalPart; i++)
+        starSpan += `<span class="material-icons gold-color">star</span>`;
+
+    if(fractPart >= 0.5){
+        starSpan += `<span class="material-icons gold-color">star_half</span>`;
+    }
+
+    return starSpan;
+}
     // fetch(endPoint)
     // .then(function(res){
     //   res.json()
@@ -95,34 +110,40 @@ const getProductAsHTML = (product) => {
     return `
     <article class="product">
         <header class="bottom-border">
-            <img src=${product.image} alt="Product Image">
+            <div class="product-image"><img src=${product.image} alt="Product Image"><div>
             <div class="product-header-grid">
                 ${getProductStatusbyQtyAsHTML(product.quantity)}
+                <div class="product-rating">
+                    <span>User rating ${product.rating} (${product.ratingCount})</span>
+                    <span>${getProductRatingAsHTML(product.rating)}<span>
+                </div>
                 <fieldset class="product-colors-block">
-                    <legend>colour variants</legend>
-                    <ul class="swatches">
-                        <li>
-                            <label class="product-color red">
-                                <input type="radio" name="colour" value="r" checked> <!-- default -->
-                                <span>Red</span>
-                            </label>
-                        </li>
+                    <span><legend>colour variants</legend></span>
+                    <div>
+                        <ul class="swatches">
+                            <li>
+                                <label class="product-color red">
+                                    <input type="radio" name="colour" value="r" checked> <!-- default -->
+                                    <span>Red</span>
+                                </label>
+                            </li>
 
-                        <li>
-                            <label class="product-color white">
-                                <input type="radio" name="colour" value="w">
-                                <span>White</span>
-                            </label>
-                        </li>
+                            <li>
+                                <label class="product-color white">
+                                    <input type="radio" name="colour" value="w">
+                                    <span>White</span>
+                                </label>
+                            </li>
 
-                        <li>
-                            <label class="product-color blue">
-                                <input type="radio" name="colour" value="b"> 
-                                <span>Blue</span>
-                            </label>
-                        </li>
-                    </ul>
+                            <li>
+                                <label class="product-color blue">
+                                    <input type="radio" name="colour" value="b"> 
+                                    <span>Blue</span>
+                                </label>
+                            </li>
+                        </ul>
                     <output id="selected"></output>
+                    </div>
                 </fieldset>
             </div>
         </header>
@@ -136,7 +157,7 @@ const getProductAsHTML = (product) => {
             <form class="product-footer-form">
                 <data class="price" value="39"><del>$50.00</del><ins class="offer-price">$39.00</ins></data>
                 <input type="button" class="buy-button" value="Buy Now">
-                <button class="light-buttons"><span class="material-icons add-cart">add_shopping_cart</span></button>
+                <button class="transparent-button align-right"><span class="material-icons add-cart">add_shopping_cart</span></button>
             </form>
         </footer>
     </article>`
@@ -144,7 +165,35 @@ const getProductAsHTML = (product) => {
     return HTMLString;
 }
 
-window.addEventListener("load", () => {
+const calculateAndShowNumberOfPages = (productsPerPage) =>{
+    const numberOfPages = Math.ceil(productList.length/productsPerPage);
+}
+
+const showProductsByPage = (pageNumber) => {
     const productsSection = document.getElementById("products");
-    productsSection.innerHTML += productList.map(getProductAsHTML);
+    
+    const productsPerPage = Math.ceil(productList.length/1);
+    const firstIndex = (pageNumber-1)*productsPerPage;
+    const lastIndex = firstIndex + productsPerPage;
+    
+    console.log(firstIndex, lastIndex);
+    productsSection.innerHTML = ``;
+    productsSection.innerHTML += productList.slice(firstIndex, lastIndex).map(getProductAsHTML).join('');
+}
+
+window.addEventListener("load", () => {
+    const paginationParent = document.getElementById("pagination-section");
+    
+    paginationParent.addEventListener("click", (event)=>{
+        clickedPage = parseInt(event.target.innerHTML);
+        showProductsByPage(clickedPage);
+    });
+    showProductsByPage(1);
+
+
+    // window.addEventListener('scroll', event => {
+    //     const px = window.pageYOffset;
+    // })
+
+
 });  

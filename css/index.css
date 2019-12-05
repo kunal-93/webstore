@@ -9,7 +9,8 @@
     border-bottom: .05em solid rgb(180, 177, 177);
 }
 body{
-    /* background-color: rgb(253, 249, 249); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8em;
 }
 .red-color{
     color: rgb(202, 28, 28);
@@ -20,10 +21,16 @@ body{
 .grey-color{
     color: grey;
 }
+.gold-color{
+    color:goldenrod;
+}
+.align-right{
+    text-align: right;
+}
 .header{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: .1em;
+    /* display: grid; */
+    /* grid-template-columns: 1fr; */
+    /* grid-gap: .1em; */
     position: fixed;
     top: 0;
     left: 0;
@@ -31,15 +38,23 @@ body{
     z-index: 0;
     background-color: white;
 }
+
+.header.extended .header-menu {
+    display: block;
+}
+
+
 .header-nav{
     box-sizing: border-box;
     box-shadow: .1em .1em 1em .1em grey;
     padding: 0.2em 1em;
 }
 .header-nav-top-row{
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, 1fr);
+    /* justify-items: space-evenly; */
     align-items: center;
+    
 }
 .header-nav-form{
     text-align: right;
@@ -71,11 +86,24 @@ body{
 .main{
     margin: 5em 1em 0 1em;
 }
+
+.header.extended + .main {
+    margin-top: 15em;
+}
+
 .product{
     display: grid;
     text-align: left;
     align-items: center;
     row-gap: .5em;
+}
+.product-image{
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .product h3{
     font-size: 1.8em;
@@ -86,12 +114,12 @@ body{
     display: inline-block;
 }
 
-.light-buttons{
+.transparent-button{
     background-color: white;
     border-width: 0;
     /* box-shadow: .1em .1em 2rem .1rem rgb(223, 219, 219); */
 }
-.light-buttons-grid{
+.transparent-button-grid{
     border-width: 0;
     background-color: white;
     display: grid;
@@ -102,11 +130,25 @@ body{
 
 .product-header-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     text-align: left;
     align-items: center;
     margin-bottom: .5em;
 }
+
+.product-rating{
+    display: grid;
+    text-align: center;
+    grid-gap: 0.2em;
+}
+
+
+.product-colors-block{
+    display: grid;
+    text-align: right;
+    /* grid-gap: 1em; */
+}
+
 .swatches {
     display: inline-block;
 }
@@ -145,20 +187,18 @@ body{
 .product-color.red { background-color: tomato; }
 .product-color.blue { background-color: dodgerblue; }
 .product-color.white { background-color: white; }
-.product-colors-block{
-    text-align: right;
-}
 .product-footer-form{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     text-align: left;
     margin: 1em 0;
+    column-gap: .5em;
 }
 .price{
     display: grid;
     font-size: 1.2em;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 .offer-price{
     color: green;
