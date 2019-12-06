@@ -3,7 +3,7 @@ let productList =  [
         {
             "id" : 1,
             "name" : "Aspire Z3",
-            "image" : "/img/laptops/Product_1/main.png",
+            "image" : "../img/laptops/Product_1/main.png",
             "description" : ["Windows 10 Home", "Intel® Core™ i5-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
                             "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 899.99,
@@ -18,7 +18,7 @@ let productList =  [
         {
             "id" : 2,
             "name" : "Predator 15 Gaming",
-            "image" : "/img/laptops/Product_2/main.png",
+            "image" : "../img/laptops/Product_2/main.png",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1060 with 6 GB Dedicated Memory", "16 GB, DDR4 SDRAM", "1 TB HDD, 256 GB SSD",
                             "30-day Microsoft Office trial included"],
@@ -34,7 +34,7 @@ let productList =  [
         {
             "id" : 3,
             "name" : "Nitro 5 Gaming Laptop - AN515-43-R2MG",
-            "image" : "/img/laptops/Product_3/main.png",
+            "image" : "../img/laptops/Product_3/main.png",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 899.99,
@@ -48,7 +48,7 @@ let productList =  [
         {
             "id" : 4,
             "name" : "Nitro 5 Gaming Laptop - AN515-53-55H5",
-            "image" : "/img/laptops/Product_4/main.png",
+            "image" : "../img/laptops/Product_4/main.png",
             "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 799.99,
@@ -62,7 +62,7 @@ let productList =  [
         {
             "id" : 5,
             "name" : "Aspire Z3",
-            "image" : "/img/laptops/Product_1/main.png",
+            "image" : "../img/laptops/Product_1/main.png",
             "description" : ["Windows 10 Home", "Intel® Core™ i5-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
                             "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 799.99,
@@ -76,7 +76,7 @@ let productList =  [
         {
             "id" : 6,
             "name" : "Predator 15 Gaming",
-            "image" : "/img/laptops/Product_2/main.png",
+            "image" : "../img/laptops/Product_2/main.png",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1060 with 6 GB Dedicated Memory", "16 GB, DDR4 SDRAM", "1 TB HDD, 256 GB SSD",
                             "30-day Microsoft Office trial included"],
@@ -91,7 +91,7 @@ let productList =  [
         {
             "id" : 7,
             "name" : "Nitro 5 Gaming Laptop - AN515-43-R2MG",
-            "image" : "/img/laptops/Product_3/main.png",
+            "image" : "../img/laptops/Product_3/main.png",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 799.99,
@@ -105,7 +105,7 @@ let productList =  [
         {
             "id" : 8,
             "name" : "Nitro 5 Gaming Laptop - AN515-53-55H5",
-            "image" : "/img/laptops/Product_4/main.png",
+            "image" : "../img/laptops/Product_4/main.png",
             "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 799.99,
