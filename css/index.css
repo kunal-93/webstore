@@ -50,18 +50,21 @@ body{
     padding: 0.2em 1em;
 }
 .header-nav-top-row{
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* justify-items: space-evenly; */
+    justify-content: space-between;
     align-items: center;
     
 }
 .header-nav-form{
     text-align: right;
+    margin-left: 2em;
 }
 .header-nav-form > ul{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); */
+    justify-content: space-between;
+
 }
 .logo{
     text-align: center;
@@ -122,8 +125,9 @@ body{
 .transparent-button-grid{
     border-width: 0;
     background-color: white;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    /* grid-template-columns: 1fr 1fr; */
+    justify-content: space-evenly;
     text-align: center;
     align-items: center;
 }
@@ -221,4 +225,16 @@ body{
     border-width: 0;
     font-size: 1.5em;
     border-radius: 2em;
+}
+.pagination-section{
+    text-align: center;
+}
+.page-listing{
+    display: inline-block;
+    padding: 0;
+    /* text-align: center; */
+}
+.page-listing li{
+    display: inline-block;
+    padding: 0 .5em;
 }

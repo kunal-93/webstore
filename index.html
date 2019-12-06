@@ -48,7 +48,7 @@
     <main class="main">
       <header>
         <div class="main-header">
-            <button class="transparent-button-grid"><span>Filters</span><span class="material-icons">filter_list</span></button>
+            <button class="transparent-button-grid" id="filterButton"><span>Filters</span><span class="material-icons">filter_list</span></button>
             <button class="transparent-button-grid"><label>Sort by</label><span class="material-icons">sort</span></button>
         </div> 
         <h1>Sale on [Category Name]</h1>
@@ -120,17 +120,13 @@
         </div>
       </section>
 
-      <footer>
-        <p>1-5 of 20 products found</p>
-        <nav aria-label="Product Pages" id="pagination-section">
-          <a href="#" aria-label="Previous page">prev</a>
-          <ol id="pageList">
-            <li><a href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>
-            <li><a href="#" aria-label="Page 2">2</a></li>
-            <li><a href="#" aria-label="Page 3">3</a></li>
-            <li><a href="#" aria-label="Page 4">4</a></li>
+      <footer class="main-footer" id="mainFooter">
+        <p id="mainFooterResults"></p>
+        <nav aria-label="Product Pages" class="pagination-section" id="paginationSection">
+            <button aria-label="Previous page" class="transparent-button" id="previousPage"><span class="material-icons">navigate_before</span></button>
+          <ol class="page-listing" id="pageListing">
           </ol>
-          <a href="#" aria-label="Next page">next</a>
+          <button aria-label="Next page" class="transparent-button" id="nextPage"><span class="material-icons">navigate_next</span></button>
         </nav>
       </footer>
     </main>

@@ -1,3 +1,4 @@
+// global variables
 let productList =  [
         {
             "id" : 1,
@@ -57,10 +58,76 @@ let productList =  [
             "color" : ["Silver", "Black", "Red"],
             "rating": 3.3,
             "ratingCount" : 570 
+        },
+        {
+            "id" : 5,
+            "name" : "Aspire Z3",
+            "image" : "/img/laptops/Product_1/main.png",
+            "description" : ["Windows 10 Home", "Intel® Core™ i5-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
+                            "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
+            "price" : 799.99,
+            "quantity" : 20,
+            "category" : "laptop",
+            "screenSize" : "15.6",
+            "color" : ["Silver", "Black", "Red"],
+            "rating": 3.3,
+            "ratingCount" : 570 
+        },
+        {
+            "id" : 6,
+            "name" : "Predator 15 Gaming",
+            "image" : "/img/laptops/Product_2/main.png",
+            "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
+                            "NVIDIA® GeForce® GTX 1060 with 6 GB Dedicated Memory", "16 GB, DDR4 SDRAM", "1 TB HDD, 256 GB SSD",
+                            "30-day Microsoft Office trial included"],
+            "price" : 799.99,
+            "quantity" : 20,
+            "category" : "laptop",
+            "screenSize" : "15.6",
+            "color" : ["Silver", "Black", "Red"],
+            "rating": 3.3,
+            "ratingCount" : 570   
+        },
+        {
+            "id" : 7,
+            "name" : "Nitro 5 Gaming Laptop - AN515-43-R2MG",
+            "image" : "/img/laptops/Product_3/main.png",
+            "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
+                            "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
+            "price" : 799.99,
+            "quantity" : 20,
+            "category" : "laptop",
+            "screenSize" : "15.6",
+            "color" : ["Silver", "Black", "Red"],
+            "rating": 3.3,
+            "ratingCount" : 570        
+        },
+        {
+            "id" : 8,
+            "name" : "Nitro 5 Gaming Laptop - AN515-53-55H5",
+            "image" : "/img/laptops/Product_4/main.png",
+            "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
+                            "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
+            "price" : 799.99,
+            "quantity" : 20,
+            "category" : "laptop",
+            "screenSize" : "15.6",
+            "color" : ["Silver", "Black", "Red"],
+            "rating": 3.3,
+            "ratingCount" : 570        
         }
     ]
+let currentPage = 1;
+let productsPerPage = 3;
 
-// Utility Functions
+/*-------------Utility Funtions---------------*/
+
+/*  Function: getProductStatusbyQtyAsHTML
+    Parameters: quantity: Integer
+    Return: string
+    Description: displays stock status of product based on quantity and 
+                apply suitable color class to the status text
+*/
 const getProductStatusbyQtyAsHTML = (quantity) => {
     let colorClass = null;
     let stockStatus = null;
@@ -80,10 +147,12 @@ const getProductStatusbyQtyAsHTML = (quantity) => {
     return `<span class=${colorClass}>${stockStatus}</span>`
 };
 
-const getProductDescriptionAsListItems = (descriptionPoint) => {
-    return `<li>${descriptionPoint}</li>`;
-}
-
+/*  Function: getProductRatingAsHTML
+    Parameters: rating: float
+    Return: string
+    Description: calculate number full and half stars based on the product rating and 
+                creates HTML string to return
+*/
 const getProductRatingAsHTML = (rating) => {
     const fractPart = rating - Math.floor(rating);
     const decimalPart = Math.floor(rating);
@@ -106,6 +175,12 @@ const getProductRatingAsHTML = (rating) => {
   
     // })
 // <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+
+/*  Function: getProductAsHTML
+    Parameters: product: Object
+    Return: String
+    Description: dynamically creates product HTML using product attributes from data
+*/
 const getProductAsHTML = (product) => {
     return `
     <article class="product">
@@ -150,7 +225,7 @@ const getProductAsHTML = (product) => {
         <main class="bottom-border">
             <h3>${product.name}</h3>
             <ul class="product-description-list">
-                ${product.description.map(getProductDescriptionAsListItems).join('')}
+                ${product.description.map(x => `<li>${x}</li>`).join('')}
             </ul>
         </main>
         <footer class="bottom-border">
@@ -165,35 +240,88 @@ const getProductAsHTML = (product) => {
     return HTMLString;
 }
 
+/*-------------Functionality Funtions---------------*/
+
+/*  Function: calculateAndShowNumberOfPages
+    Parameters: productsPerPage: Integer
+    Return: None
+    Description: calculates number of pages and add them to inner HTML
+*/
 const calculateAndShowNumberOfPages = (productsPerPage) =>{
     const numberOfPages = Math.ceil(productList.length/productsPerPage);
+    const pageListing = document.getElementById("pageListing");
+    pageListing.innerHTML = `<li><a href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>`;
+    for(let i=2; i<=numberOfPages; i++){
+        pageListing.innerHTML += `<li><a href="#" aria-label="Page ${i}">${i}</a></li>\n`
+    }
+    
 }
 
-const showProductsByPage = (pageNumber) => {
-    const productsSection = document.getElementById("products");
-    
-    const productsPerPage = Math.ceil(productList.length/1);
+/*  Function: showProductsByPage
+    Parameters: pageNumber: Integer
+                productsPerPage: Integer
+    Return: None
+    Description: slices the products according to the current page number
+*/
+const showProductsByPage = (pageNumber, productsPerPage) => {
+    currentPage = pageNumber;
+    //update current page aria-label for accessibility
+    const pageListing = document.getElementById("pageListing");
+
     const firstIndex = (pageNumber-1)*productsPerPage;
-    const lastIndex = firstIndex + productsPerPage;
+    const lastIndex = Math.min(productList.length,firstIndex + productsPerPage);
+
+    // update product results at start of footer
+    document.getElementById("mainFooterResults").innerHTML = `Page ${pageNumber}, showing products ${firstIndex+1} to ${lastIndex} of ${productList.length} products`;
     
-    console.log(firstIndex, lastIndex);
+    const productsSection = document.getElementById("products");    
     productsSection.innerHTML = ``;
     productsSection.innerHTML += productList.slice(firstIndex, lastIndex).map(getProductAsHTML).join('');
+
+    //disable prev page and next page link if needed
+    const numberOfPages = Math.ceil(productList.length/productsPerPage);
+    
+    if(pageNumber === 1){
+        document.getElementById("previousPage").setAttribute("disabled", true);
+        document.getElementById("nextPage").removeAttribute("disabled");
+    }
+    else if(pageNumber === numberOfPages){
+        console.log("2nd");
+        document.getElementById("previousPage").removeAttribute("disabled");
+        document.getElementById("nextPage").setAttribute("disabled", true);
+    }
+    else{
+        document.getElementById("nextPage").removeAttribute("disabled");
+        document.getElementById("previousPage").removeAttribute("disabled");   
+    }
 }
 
 window.addEventListener("load", () => {
-    const paginationParent = document.getElementById("pagination-section");
     
+    calculateAndShowNumberOfPages(productsPerPage);
+    
+    // add listener to page listing parent
+    const paginationParent = document.getElementById("pageListing");
     paginationParent.addEventListener("click", (event)=>{
         clickedPage = parseInt(event.target.innerHTML);
-        showProductsByPage(clickedPage);
+        showProductsByPage(clickedPage, productsPerPage);
     });
-    showProductsByPage(1);
+    // Add Listeners to previous and next button
+    document.getElementById("previousPage").addEventListener("click", () =>{
+        window.scroll(0,0);
+        showProductsByPage(currentPage - 1, productsPerPage);
+    });
+    document.getElementById("nextPage").addEventListener("click", () =>{
+        window.scroll(0,0);
+        showProductsByPage(currentPage + 1, productsPerPage);
+    });
 
+    // call to show products on page 1 for the first load
+    showProductsByPage(currentPage, productsPerPage);
 
-    // window.addEventListener('scroll', event => {
-    //     const px = window.pageYOffset;
-    // })
+    const filterButton = document.getElementById("filterButton");
+    filterButton.addEventListener("click", ()=>{
 
-
+    });
+    
 });  
