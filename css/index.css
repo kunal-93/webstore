@@ -3,7 +3,7 @@
     padding: 0;
 }
 .material-icons{
-    font-size: 2em;
+    font-size: 1.8em;
 }
 .bottom-border{
     border-bottom: .05em solid rgb(180, 177, 177);
@@ -140,13 +140,6 @@ body{
     margin-bottom: .5em;
 }
 
-.product-rating{
-    display: grid;
-    text-align: center;
-    grid-gap: 0.2em;
-}
-
-
 .product-colors-block{
     display: grid;
     text-align: right;
@@ -188,9 +181,11 @@ body{
       "+" is used to express "the sibling that immediately follows" */
   
   /* Add the colours */
-.product-color.red { background-color: tomato; }
-.product-color.blue { background-color: dodgerblue; }
+.product-color.red { background-color: rgb(163, 33, 10); }
+.product-color.blue { background-color: rgba(3, 54, 104, 0.863); }
 .product-color.white { background-color: white; }
+.product-color.black{ background-color: black; }
+
 .product-footer-form{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;

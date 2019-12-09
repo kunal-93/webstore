@@ -2,117 +2,145 @@
 let productList =  [
         {
             "id" : 1,
-            "name" : "Aspire Z3",
-            "image" : "../img/laptops/Product_1/main.png",
-            "description" : ["Windows 10 Home", "Intel® Core™ i5-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
+            "name" : "Notebook 9 Pen",
+            "image" : "../img/laptops/Product_1/silver_main.jpg",
+            "description" : ["Windows 10 Home", "Intel® Core™ i7-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
                             "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 899.99,
             "quantity" :  2,
             "category" : "laptop",
             "type" : "Regular",
-            "screenSize" : "23.8",
-            "color" : ["Silver", "Black"],
+            "RAM" : [8, 16],
+            "color" : ["silver", "blue"],
             "rating": 3.4,
             "ratingCount" : 200
         },
         {
             "id" : 2,
-            "name" : "Predator 15 Gaming",
-            "image" : "../img/laptops/Product_2/main.png",
+            "name" : "Notebook 9 Pen Gaming",
+            "image" : "../img/laptops/Product_2/blue_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1060 with 6 GB Dedicated Memory", "16 GB, DDR4 SDRAM", "1 TB HDD, 256 GB SSD",
                             "30-day Microsoft Office trial included"],
-            "price" : 1499.99,
+            "price" : 1799.99,
             "quantity" : 15,
             "category" : "laptop",
             "type" : "Gaming",
-            "screenSize" : "15.6",
-            "color" : ["Silver", "Black"],
+            "RAM" : [8, 12, 16],
+            "color" : ["blue", "Black"],
             "rating": 4.7,
             "ratingCount" : 10
         },
         {
             "id" : 3,
-            "name" : "Nitro 5 Gaming Laptop - AN515-43-R2MG",
-            "image" : "../img/laptops/Product_3/main.png",
+            "name" : "Notebook 9 Pen Pro",
+            "image" : "../img/laptops/Product_3/silver_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 899.99,
             "quantity" : 20,
             "category" : "laptop",
-            "screenSize" : "15.6",
-            "color" : ["Silver", "Black", "Red"],
+            "RAM" : [8, 16],
+            "color" : ["silver"],
             "rating": 4.9,
             "ratingCount" : 26    
         },
         {
             "id" : 4,
-            "name" : "Nitro 5 Gaming Laptop - AN515-53-55H5",
-            "image" : "../img/laptops/Product_4/main.png",
+            "name" : "Notebook 7 Pen",
+            "image" : "../img/laptops/Product_4/silver_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 799.99,
             "quantity" : 20,
             "category" : "laptop",
-            "screenSize" : "15.6",
-            "color" : ["Silver", "Black", "Red"],
+            "RAM" : [8],
+            "color" : ["silver"],
             "rating": 3.3,
             "ratingCount" : 570 
         },
         {
             "id" : 5,
-            "name" : "Aspire Z3",
-            "image" : "../img/laptops/Product_1/main.png",
+            "name" : "Notebook 7 Pen Gaming",
+            "image" : "../img/laptops/Product_5/black_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i5-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
                             "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 799.99,
             "quantity" : 20,
             "category" : "laptop",
-            "screenSize" : "15.6",
-            "color" : ["Silver", "Black", "Red"],
+            "RAM" : [8, 16],
+            "color" : ["black"],
             "rating": 3.3,
             "ratingCount" : 570 
         },
         {
             "id" : 6,
-            "name" : "Predator 15 Gaming",
-            "image" : "../img/laptops/Product_2/main.png",
+            "name" : "Notebook 7 Pen Pro",
+            "image" : "../img/laptops/Product_6/black_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1060 with 6 GB Dedicated Memory", "16 GB, DDR4 SDRAM", "1 TB HDD, 256 GB SSD",
                             "30-day Microsoft Office trial included"],
             "price" : 799.99,
             "quantity" : 20,
             "category" : "laptop",
-            "screenSize" : "15.6",
-            "color" : ["Silver", "Black", "Red"],
+            "RAM" : [8, 12, 16],
+            "color" : ["black"],
             "rating": 3.3,
             "ratingCount" : 570   
         },
         {
             "id" : 7,
-            "name" : "Nitro 5 Gaming Laptop - AN515-43-R2MG",
-            "image" : "../img/laptops/Product_3/main.png",
+            "name" : "Notebook Odyssey",
+            "image" : "../img/laptops/Product_7/silver_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
-            "price" : 799.99,
+            "price" : 1799.99,
             "quantity" : 20,
             "category" : "laptop",
-            "screenSize" : "15.6",
-            "color" : ["Silver", "Black", "Red"],
+            "RAM" : [8, 12, 16],
+            "color" : ["silver"],
             "rating": 3.3,
             "ratingCount" : 570        
         },
         {
             "id" : 8,
-            "name" : "Nitro 5 Gaming Laptop - AN515-53-55H5",
-            "image" : "../img/laptops/Product_4/main.png",
+            "name" : "Notebook Odyssey Gaming",
+            "image" : "../img/laptops/Product_8/black_main.jpg",
+            "description" : ["Windows 10 Home", "Intel® Core™ i7-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
+                            "NVIDIA® GeForce® GTX 2060 with 8 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
+            "price" : 1999.99,
+            "quantity" : 20,
+            "category" : "laptop",
+            "RAM" : [8, 16],
+            "color" : ["black", "white"],
+            "rating": 3.3,
+            "ratingCount" : 570        
+        },
+        {
+            "id" : 9,
+            "name" : "Notebook 5",
+            "image" : "../img/laptops/Product_9/white_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 799.99,
             "quantity" : 20,
             "category" : "laptop",
-            "screenSize" : "15.6",
-            "color" : ["Silver", "Black", "Red"],
+            "RAM" : [8, 16],
+            "color" : ["white"],
+            "rating": 3.3,
+            "ratingCount" : 570        
+        },
+        {
+            "id" : 10,
+            "name" : "Notebook Flash",
+            "image" : "../img/laptops/Product_10/grey_main.jpg",
+            "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
+                            "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
+            "price" : 799.99,
+            "quantity" : 20,
+            "category" : "laptop",
+            "RAM" : [8, 16],
+            "color" : ["grey"],
             "rating": 3.3,
             "ratingCount" : 570        
         }
@@ -176,6 +204,17 @@ const getProductRatingAsHTML = (rating) => {
     // })
 // <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
 
+
+const getColorSwatch = (product_color) => {
+    return `
+        <li>
+            <label class="product-color ${product_color}">
+                <input type="radio" name="colour" value="${product_color}"> <!-- default -->
+                <span>${product_color}</span>
+            </label>
+        </li>
+    `
+}
 /*  Function: getProductAsHTML
     Parameters: product: Object
     Return: String
@@ -188,34 +227,15 @@ const getProductAsHTML = (product) => {
             <div class="product-image"><img src=${product.image} alt="Product Image"><div>
             <div class="product-header-grid">
                 ${getProductStatusbyQtyAsHTML(product.quantity)}
-                <div class="product-rating">
-                    <span>User rating ${product.rating} (${product.ratingCount})</span>
-                    <span>${getProductRatingAsHTML(product.rating)}<span>
+                <div>
+                    <p>User rating ${product.rating} (${product.ratingCount})</p>
+                    <div>${getProductRatingAsHTML(product.rating)}</div>
                 </div>
                 <fieldset class="product-colors-block">
-                    <span><legend>colour variants</legend></span>
+                    <legend>colours</legend>
                     <div>
                         <ul class="swatches">
-                            <li>
-                                <label class="product-color red">
-                                    <input type="radio" name="colour" value="r" checked> <!-- default -->
-                                    <span>Red</span>
-                                </label>
-                            </li>
-
-                            <li>
-                                <label class="product-color white">
-                                    <input type="radio" name="colour" value="w">
-                                    <span>White</span>
-                                </label>
-                            </li>
-
-                            <li>
-                                <label class="product-color blue">
-                                    <input type="radio" name="colour" value="b"> 
-                                    <span>Blue</span>
-                                </label>
-                            </li>
+                            ${product.color.map(getColorSwatch).join('\n')}
                         </ul>
                     <output id="selected"></output>
                     </div>
@@ -230,7 +250,7 @@ const getProductAsHTML = (product) => {
         </main>
         <footer class="bottom-border">
             <form class="product-footer-form">
-                <data class="price" value="39"><del>$50.00</del><ins class="offer-price">$39.00</ins></data>
+                <data class="price" value="$${product.price.toFixed(2)}"><del>$${(product.price*(Math.random()+1)).toFixed(2)}</del><ins class="offer-price">$${product.price}</ins></data>
                 <input type="button" class="buy-button" value="Buy Now">
                 <button class="transparent-button align-right"><span class="material-icons add-cart">add_shopping_cart</span></button>
             </form>
@@ -264,6 +284,7 @@ const calculateAndShowNumberOfPages = (productsPerPage) =>{
     Description: slices the products according to the current page number
 */
 const showProductsByPage = (pageNumber, productsPerPage) => {
+
     currentPage = pageNumber;
     //update current page aria-label for accessibility
     const pageListing = document.getElementById("pageListing");
@@ -286,7 +307,6 @@ const showProductsByPage = (pageNumber, productsPerPage) => {
         document.getElementById("nextPage").removeAttribute("disabled");
     }
     else if(pageNumber === numberOfPages){
-        console.log("2nd");
         document.getElementById("previousPage").removeAttribute("disabled");
         document.getElementById("nextPage").setAttribute("disabled", true);
     }
@@ -294,6 +314,24 @@ const showProductsByPage = (pageNumber, productsPerPage) => {
         document.getElementById("nextPage").removeAttribute("disabled");
         document.getElementById("previousPage").removeAttribute("disabled");   
     }
+}
+
+
+// Sorting order function
+const sortProducts = (criteria) => {
+
+    if (criteria == 'Ratings') {
+      // High to Low ratings
+      productList.sort((a, b) => b.rating - a.rating);
+    } else if (criteria == 'PriceAsc') {
+      // Low to High Price
+      productList.sort((a, b) => a.price - b.price);
+    } else if (criteria == 'PriceDesc') {
+      // High to Low Price
+      productList.sort((a, b) => b.price - a.price);
+    }
+
+    showProductsByPage(1, productsPerPage);
 }
 
 window.addEventListener("load", () => {
@@ -319,9 +357,15 @@ window.addEventListener("load", () => {
     // call to show products on page 1 for the first load
     showProductsByPage(currentPage, productsPerPage);
 
+    
     const filterButton = document.getElementById("filterButton");
-    filterButton.addEventListener("click", ()=>{
-
+   
+    document.getElementById('sortOrder').addEventListener('change', () =>{
+        // sort dropdown value
+        const sortCriteria = document.getElementById('sortOrder').value;
+        sortProducts(sortCriteria);
     });
+
+        
     
 });  

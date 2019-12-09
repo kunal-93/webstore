@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStore</title>
-    <meta name="description" content="A webstore to choose from a variety of computer products">
+    <meta name="description" content="A webstore to choose from a variety of Electronics products">
     <meta name="author" content="Kunal Dhawan">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
@@ -49,7 +49,15 @@
       <header>
         <div class="main-header">
             <button class="transparent-button-grid" id="filterButton"><span>Filters</span><span class="material-icons">filter_list</span></button>
-            <button class="transparent-button-grid"><label>Sort by</label><span class="material-icons">sort</span></button>
+            <label for="sortOrder">
+              <span class="material-icons">sort</span>
+              <select name="sort" id="sortOrder" class="sort">
+                <option value="none" disabled selected>-- Sort by --</option>
+                <option value="Ratings">Ratings, Hight to Low</option>
+                <option value="PriceAsc">Price, Low to High</option>
+                <option value="PriceDesc">Price, High to Low</option>
+              </select>
+            </label> 
         </div> 
         <h1>Sale on [Category Name]</h1>
         <form class="filter-panel">
