@@ -304,3 +304,7 @@ body{
     display: inline-block;
     padding: 0 .5em;
 }
+.dark-themed{
+    background-color: var(--color-grey);
+    color: white
+}
