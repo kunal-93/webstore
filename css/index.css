@@ -103,6 +103,8 @@ body{
     text-align: center;
     border-bottom: .1em solid grey;
     align-items: center;
+    margin: .5em 0;
+    box-shadow: .1em .1em 1em .1em grey;
 }
 .filter-panel{
     position: static;
