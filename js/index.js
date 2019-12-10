@@ -1,16 +1,21 @@
+/* Settings */
+const settings = {
+    imagePath:'img/'
+}
+
 // global variables
 let productList =  [
         {
             "id" : 1,
             "name" : "Notebook 9 Pen",
-            "image" : "../img/laptops/Product_1/silver_main.jpg",
+            "image" : "laptops/Product_1/silver_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
                             "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 899.99,
             "quantity" :  2,
             "category" : "laptop",
             "type" : "Regular",
-            "RAM" : [8, 16],
+            "RAM" : [8, 12],
             "color" : ["silver", "blue"],
             "rating": 3.4,
             "ratingCount" : 200
@@ -18,7 +23,7 @@ let productList =  [
         {
             "id" : 2,
             "name" : "Notebook 9 Pen Gaming",
-            "image" : "../img/laptops/Product_2/blue_main.jpg",
+            "image" : "laptops/Product_2/blue_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1060 with 6 GB Dedicated Memory", "16 GB, DDR4 SDRAM", "1 TB HDD, 256 GB SSD",
                             "30-day Microsoft Office trial included"],
@@ -34,13 +39,13 @@ let productList =  [
         {
             "id" : 3,
             "name" : "Notebook 9 Pen Pro",
-            "image" : "../img/laptops/Product_3/silver_main.jpg",
+            "image" : "laptops/Product_3/silver_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
-            "price" : 899.99,
+            "price" : 999.99,
             "quantity" : 20,
             "category" : "laptop",
-            "RAM" : [8, 16],
+            "RAM" : [8, 12],
             "color" : ["silver"],
             "rating": 4.9,
             "ratingCount" : 26    
@@ -48,13 +53,13 @@ let productList =  [
         {
             "id" : 4,
             "name" : "Notebook 7 Pen",
-            "image" : "../img/laptops/Product_4/silver_main.jpg",
+            "image" : "laptops/Product_4/silver_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
-            "price" : 799.99,
+            "price" : 1399.99,
             "quantity" : 20,
             "category" : "laptop",
-            "RAM" : [8],
+            "RAM" : [4,8],
             "color" : ["silver"],
             "rating": 3.3,
             "ratingCount" : 570 
@@ -62,13 +67,13 @@ let productList =  [
         {
             "id" : 5,
             "name" : "Notebook 7 Pen Gaming",
-            "image" : "../img/laptops/Product_5/black_main.jpg",
+            "image" : "laptops/Product_5/black_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i5-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
                             "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
-            "price" : 799.99,
+            "price" : 1099.99,
             "quantity" : 0,
             "category" : "laptop",
-            "RAM" : [8, 16],
+            "RAM" : [12, 16],
             "color" : ["black"],
             "rating": 3.3,
             "ratingCount" : 570 
@@ -76,14 +81,14 @@ let productList =  [
         {
             "id" : 6,
             "name" : "Notebook 7 Pen Pro",
-            "image" : "../img/laptops/Product_6/black_main.jpg",
+            "image" : "laptops/Product_6/black_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1060 with 6 GB Dedicated Memory", "16 GB, DDR4 SDRAM", "1 TB HDD, 256 GB SSD",
                             "30-day Microsoft Office trial included"],
-            "price" : 799.99,
+            "price" : 1499.99,
             "quantity" : 20,
             "category" : "laptop",
-            "RAM" : [8, 12, 16],
+            "RAM" : [8, 12],
             "color" : ["black"],
             "rating": 3.3,
             "ratingCount" : 570   
@@ -91,13 +96,13 @@ let productList =  [
         {
             "id" : 7,
             "name" : "Notebook Odyssey",
-            "image" : "../img/laptops/Product_7/silver_main.jpg",
+            "image" : "laptops/Product_7/silver_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
-            "price" : 1799.99,
+            "price" : 1899.99,
             "quantity" : 20,
             "category" : "laptop",
-            "RAM" : [8, 12, 16],
+            "RAM" : [8, 12],
             "color" : ["silver"],
             "rating": 3.3,
             "ratingCount" : 570        
@@ -105,7 +110,7 @@ let productList =  [
         {
             "id" : 8,
             "name" : "Notebook Odyssey Gaming",
-            "image" : "../img/laptops/Product_8/black_main.jpg",
+            "image" : "laptops/Product_8/black_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i7-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 2060 with 8 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 1999.99,
@@ -119,13 +124,13 @@ let productList =  [
         {
             "id" : 9,
             "name" : "Notebook 5",
-            "image" : "../img/laptops/Product_9/white_main.jpg",
+            "image" : "laptops/Product_9/white_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
-            "price" : 799.99,
+            "price" : 749.99,
             "quantity" : 13,
             "category" : "laptop",
-            "RAM" : [8, 16],
+            "RAM" : [4, 8],
             "color" : ["white"],
             "rating": 3.3,
             "ratingCount" : 570        
@@ -133,13 +138,13 @@ let productList =  [
         {
             "id" : 10,
             "name" : "Notebook Flash",
-            "image" : "../img/laptops/Product_10/grey_main.jpg",
+            "image" : "laptops/Product_10/grey_main.jpg",
             "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
-            "price" : 799.99,
+            "price" : 699.99,
             "quantity" : 0,
             "category" : "laptop",
-            "RAM" : [8, 16],
+            "RAM" : [4, 8],
             "color" : ["grey"],
             "rating": 3.3,
             "ratingCount" : 570        
@@ -195,16 +200,22 @@ const getProductRatingAsHTML = (rating) => {
 
     return starSpan;
 }
-    // fetch(endPoint)
-    // .then(function(res){
-    //   res.json()
-    //     .then(function(data){
-    //         alert(`Temp is ${data.current.temperature}`);
-    //     })
-  
-    // })
-// <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
 
+/*
+    name: isBuyDisabled
+    param: 
+        rating: string
+    return: string
+    description: add disabled attribute to button if it is out of stock
+*/
+const isBuyDisabled = (quantity) => {
+    // return string 'disabled' if quantity is 0 
+    if(quantity<=0)
+        return "disabled"
+    
+    // return empty string otherwise
+    return ''
+}
 
 const getColorSwatch = (product_color) => {
     return `
@@ -225,7 +236,7 @@ const getProductAsHTML = (product) => {
     return `
     <article class="product">
         <header class="bottom-border">
-            <div class="product-image"><img src=${product.image} alt="Product Image"><div>
+            <div class="product-image"><img src=${settings.imagePath + product.image} alt="Product Image"><div>
             <div class="product-header-grid">
                 ${getProductStatusbyQtyAsHTML(product.quantity)}
                 <div>
@@ -252,8 +263,8 @@ const getProductAsHTML = (product) => {
         <footer class="bottom-border">
             <form class="product-footer-form">
                 <data class="price" value="$${product.price.toFixed(2)}"><del>$${(product.price*(Math.random()+1)).toFixed(2)}</del><ins class="offer-price">$${product.price}</ins></data>
-                <input type="button" class="buy-button" value="Buy Now">
-                <button class="transparent-button align-right"><span class="material-icons add-cart">add_shopping_cart</span></button>
+                <input type="button" class="buy-button" value="Buy Now" ${isBuyDisabled(product.quantity)}>
+                <button type="button" class="transparent-button align-right"><span class="material-icons add-cart">add_shopping_cart</span></button>
             </form>
         </footer>
     </article>`
@@ -269,6 +280,9 @@ const getProductAsHTML = (product) => {
     Description: calculates number of pages and add them to inner HTML
 */
 const calculateAndShowNumberOfPages = (productsPerPage) =>{
+    //update number of products on top
+    document.getElementById("productsCount").innerHTML = `Total products: ${filteredProducts.length}`;
+
     const numberOfPages = Math.ceil(filteredProducts.length/productsPerPage);
     const pageListing = document.getElementById("pageListing");
     pageListing.innerHTML = `<li><a href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>`;
@@ -335,8 +349,6 @@ const sortProducts = (criteria) => {
         // High to Low Price
         filteredProducts.sort((a, b) => b.price - a.price);
     }
-
-    showProductsByPage(1, productsPerPage);
 }
 
 
@@ -350,6 +362,13 @@ const toggleFilterForm = () => {
     }
 }
 
+/*
+    name: clearAllFilters
+    param: none
+    return: none
+    desc: Clears all the filters one by one and update the filteredList
+
+*/
 const clearAllFilters = () => {
 
     /* UI clearance section */
@@ -374,15 +393,15 @@ const clearAllFilters = () => {
     for(let i=0; i<allRatingsRadio.length; i++){
         allRatingsRadio[i].checked = false;
     }
-
-    const sortCriteria = document.getElementById('sortOrder').value;
-    sortProducts(sortCriteria);
 }
 
-const matchRAM = (product, RAMFilters) => {
-    
-}
+/*
+    name: applyNewFilters
+    param: none
+    return: none
+    desc: Apply all the filters one by one and update the filteredList
 
+*/
 const applyNewFilters = () => {
     
     // Make a copy
@@ -422,17 +441,95 @@ const applyNewFilters = () => {
         document.getElementById("MaxPriceFilter").value = maxPrice;
 
     filteredProducts = filteredProducts.filter(x => minPrice <= x.price && x.price <= maxPrice);
+
+    // Apply Ratings filters
+    let selectedMinRating = 0;
+    const allRatingsRadio = document.querySelectorAll("input[name='rating']");
+    for(let i=0; i<allRatingsRadio.length; i++){
+        if(allRatingsRadio[i].checked){
+            selectedMinRating = parseInt(allRatingsRadio[i].value);
+            break;
+        }
+    }
+
+    filteredProducts = filteredProducts.filter(x => x.rating >= selectedMinRating);
+}
+
+/*
+    name: searchProducts
+    param: searchString: string
+    return: none
+    description: Filter products based on the search string
+*/
+const searchProducts = (searchString) => {
+    // Apply New Filters first to get the data as per filters and then apply search
+    applyNewFilters();
+
+    // Return if nothing is to be searched
+    if(searchString.length<=0)
+        return;
     
+    //Search the string in 4 fields of product (name, description, colors, category)
+    filteredProducts = filteredProducts.filter( product => {
+        if(product.name.toLowerCase().includes(searchString))
+            return true;
+        if(product.category.toLowerCase().includes(searchString))
+            return true;
+        
+        // Match if color of the product matches
+        const matchedColors = product.color.filter( color => color.toLowerCase().includes(searchString));
+        //If any color is matched, matchedColors length will be greater than zero
+        if(matchedColors.length>0)
+            return true;
 
-    console.log(filteredProducts.length);
+        // search for string in the description array
+        const matchedDescription = product.description.filter(desc => desc.toLowerCase().includes(searchString));
+        //If any color is matched, matchedColors length will be greater than zero
+        if(matchedDescription.length>0)
+            return true;
 
+        //If nothing matches return False
+        return false;
+    });
+}
 
-    // hide filter form
-    toggleFilterForm();
+const renderProducts = (filteredProducts) => {
+    // sort dropdown value
+    const sortCriteria = document.getElementById('sortOrder').value;
+    const sortedProducts = sortProducts(sortCriteria);
+
+    //Update number of pages according to number of products now
+    calculateAndShowNumberOfPages(productsPerPage);
+
+    // call to show products on page 1 according to filtered product list
+    showProductsByPage(currentPage, productsPerPage);
 }
 
 window.addEventListener("load", () => {
     
+    /** Adding listeners to Header Elements*/
+    //Adding listener to menu Icon
+    document.getElementById("menuButton").addEventListener("click", () => {
+        document.getElementById("headerMenu").classList.toggle('open');
+    });
+
+    //Adding listener to search Icon
+    document.getElementById("searchIcon").addEventListener("click", () => {
+        document.getElementById("searchContainer").classList.toggle('open');
+    });
+
+    //Adding listener to search Button
+    document.getElementById("searchButton").addEventListener("click", () => {
+        const searchString = document.getElementById("searchBar").value;
+        
+        searchProducts(searchString.toLowerCase());
+        
+        renderProducts();
+
+        //Toggle search bar
+        document.getElementById("searchContainer").classList.toggle('open');
+    });
+
     calculateAndShowNumberOfPages(productsPerPage);
     
     // add listener to page listing parent
@@ -451,7 +548,15 @@ window.addEventListener("load", () => {
         showProductsByPage(currentPage + 1, productsPerPage);
     });
 
-    document.getElementById("clearFiltersButton").addEventListener("click", clearAllFilters);
+    document.getElementById("clearFiltersButton").addEventListener("click", () => {
+        // clear all filters
+        clearAllFilters();
+        
+        //Apply New Filters i.e no filters now
+        applyNewFilters();
+
+        renderProducts();
+    });
 
     // call to show products on page 1 for the first load
     showProductsByPage(currentPage, productsPerPage);
@@ -459,7 +564,15 @@ window.addEventListener("load", () => {
     
     document.getElementById("filterButton").addEventListener("click", toggleFilterForm);
     
-    document.getElementById("applyFiltersButton").addEventListener("click", applyNewFilters);
+    document.getElementById("applyFiltersButton").addEventListener("click", () => {
+        // Apply all Filters
+        applyNewFilters();
+
+        // hide filter form
+        toggleFilterForm();
+
+        renderProducts();
+    });
 
     document.getElementById('sortOrder').addEventListener('change', () => {
         // sort dropdown value

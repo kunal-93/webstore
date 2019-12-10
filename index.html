@@ -12,35 +12,32 @@
     <script src="./js/index.js"></script>
   </head>
   <body>
-    <header class="header extended">
+    <!-- add extended on clicking search button -->
+    <header class="header">
       <div>
         <nav class="header-nav">
           <ul class="header-nav-top-row">
-            <li><button type="button" class="transparent-button" type="button"><span class="material-icons">menu</span></button></li>
+            <li><button type="button" class="transparent-button" id="menuButton"><span class="material-icons">menu</span></button></li>
             <li class="logo"><a href="index.html"><img src="img/logo.svg" alt="HTML Logo"></a></li>
             <form class="header-nav-form">
               <ul>
-                <!-- <li><label>Search<input type="search" name="find" id="find"></label></li> -->
                 <li><button type="button" class="transparent-button"><span class="material-icons">shopping_cart</span></button></li>
-                <li><button type="button" class="transparent-button"><span class="material-icons">search</span></button></li>
+                <li><button type="button" class="transparent-button" id="searchIcon"><span class="material-icons">search</span></button></li>
                 <li><button type="button" class="transparent-button"><span class="material-icons">account_circle</span></button></li>
               </ul>
             </form>
           </ul>
+          <div class="search-container" id="searchContainer">
+            <input type="search" id="searchBar">
+            <button type="button" class="transparent-button" id="searchButton">Search</button>
+          </div>
+          
         </nav>
       </div>
-      <nav aria-label="Primary" class="header-menu">
-        <ul>
-          <li><a href="#">Webpage</a>
-            <ul>
-              <li><a href="#">Subpage</a></li>
-              <li><a href="#">Subpage</a></li>
-              <li><a href="#">Subpage</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Webpage</a></li>
-          <li><a href="#">Webpage</a></li>
-          <li><a href="#">Webpage</a></li>
+      <nav aria-label="Primary">
+        <ul class="header-menu" id="headerMenu">
+          <li><a href="#">Laptops</a>
+          <li><a href="#">Mobile Phones</a></li>
         </ul>
       </nav>
     </header>
@@ -50,10 +47,9 @@
         <div class="main-header">
           <button type="button" class="transparent-button-grid" id="filterButton"><span>Filters</span><span class="material-icons">filter_list</span></button>
           <label for="sortOrder">
-            <span class="material-icons">sort</span>
             <select name="sort" id="sortOrder" class="sort">
               <option value="none" disabled selected>-- Sort by --</option>
-              <option value="RatingDesc">Ratings (Hight to Low)</option>
+              <option value="RatingsDesc">Ratings (Hight to Low)</option>
               <option value="RatingsAsc">Ratings (Low to High)</option>
               <option value="PriceAsc">Price (Low to High)</option>
               <option value="PriceDesc">Price (High to Low)</option>
@@ -77,7 +73,7 @@
           <fieldset>
             <legend>Price Range</legend>
             <div class="margin-bottom space-even"><span class="margin-right">Minimum Price</span><input type="number" id="MinPriceFilter"></div>
-            <div><span class="margin-right">Maximum Price</span><input type="number" id="MaxPriceFilter"></div>
+            <div class="space-even"><span class="margin-right">Maximum Price</span><input type="number" id="MaxPriceFilter"></div>
           </fieldset>
           <fieldset>
             <legend>Ratings (at least)</legend>
@@ -113,7 +109,7 @@
       </header>
 
       <section>
-        <h2>Search Results</h2>
+        <h2 id="productsCount"></h2>
         <div id="products">
         </div>
       </section>
