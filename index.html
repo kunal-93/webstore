@@ -16,14 +16,14 @@
       <div>
         <nav class="header-nav">
           <ul class="header-nav-top-row">
-            <li><button class="transparent-button" type="button"><span class="material-icons">menu</span></button></li>
+            <li><button type="button" class="transparent-button" type="button"><span class="material-icons">menu</span></button></li>
             <li class="logo"><a href="index.html"><img src="img/logo.svg" alt="HTML Logo"></a></li>
             <form class="header-nav-form">
               <ul>
                 <!-- <li><label>Search<input type="search" name="find" id="find"></label></li> -->
-                <li><button class="transparent-button"><span class="material-icons">shopping_cart</span></button></li>
-                <li><button class="transparent-button"><span class="material-icons">search</span></button></li>
-                <li><button class="transparent-button"><span class="material-icons">account_circle</span></button></li>
+                <li><button type="button" class="transparent-button"><span class="material-icons">shopping_cart</span></button></li>
+                <li><button type="button" class="transparent-button"><span class="material-icons">search</span></button></li>
+                <li><button type="button" class="transparent-button"><span class="material-icons">account_circle</span></button></li>
               </ul>
             </form>
           </ul>
@@ -48,47 +48,36 @@
     <main class="main">
       <header>
         <div class="main-header">
-            <button class="transparent-button-grid" id="filterButton"><span>Filters</span><span class="material-icons">filter_list</span></button>
-            <label for="sortOrder">
-              <span class="material-icons">sort</span>
-              <select name="sort" id="sortOrder" class="sort">
-                <option value="none" disabled selected>-- Sort by --</option>
-                <option value="Ratings">Ratings, Hight to Low</option>
-                <option value="PriceAsc">Price, Low to High</option>
-                <option value="PriceDesc">Price, High to Low</option>
-              </select>
-            </label> 
-        </div> 
-        <h1>Sale on [Category Name]</h1>
-        <form class="filter-panel">
-          <h2>Filters</h2>
-          <fieldset>
-            <label for="sort">Show</label>
-            <select name="sort" id="sort">
-              <option value="price-high">Price, highest to lowest</option>
-              <option value="price-low">Price, lowest to highest</option>
-              <option value="newest">Newest releases</option>
+          <button type="button" class="transparent-button-grid" id="filterButton"><span>Filters</span><span class="material-icons">filter_list</span></button>
+          <label for="sortOrder">
+            <span class="material-icons">sort</span>
+            <select name="sort" id="sortOrder" class="sort">
+              <option value="none" disabled selected>-- Sort by --</option>
+              <option value="RatingDesc">Ratings (Hight to Low)</option>
+              <option value="RatingsAsc">Ratings (Low to High)</option>
+              <option value="PriceAsc">Price (Low to High)</option>
+              <option value="PriceDesc">Price (High to Low)</option>
             </select>
+          </label> 
+        </div> 
+        <form class="filter-panel" id="filterPanel">
+          <button type="button" class="transparent-button-grid" id="clearFiltersButton">Clear Filters</button>
+          <fieldset>
+              <input type="checkbox" value="excludeOutOfStock" id="excludeOutOfStock"> <label for="excludeOutOfStock">Exclude Out of Stock</label>
           </fieldset>
           <fieldset>
-            <legend>Colour</legend>
+            <legend>RAM</legend>
             <ul>
-              <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
-              <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
-              <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
-              <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
-              <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
+              <li><input type="checkbox" name="ram" value="4" id="ramFilter4GB"> <label for="4GB">4 GB</label></li>
+              <li><input type="checkbox" name="ram" value="8" id="ramFilter8GB"> <label for="8GB">8 GB</label></li>
+              <li><input type="checkbox" name="ram" value="12" id="ramFilter12GB"> <label for="12GB">12 GB</label></li>
+              <li><input type="checkbox" name="ram" value="16" id="ramFilter16GB"> <label for="16GB">16 GB</label></li>
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Sizes</legend>
-            <ol>
-              <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
-              <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
-              <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
-              <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
-              <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
-            </ol>
+            <legend>Price Range</legend>
+            <div class="margin-bottom space-even"><span class="margin-right">Minimum Price</span><input type="number" id="MinPriceFilter"></div>
+            <div><span class="margin-right">Maximum Price</span><input type="number" id="MaxPriceFilter"></div>
           </fieldset>
           <fieldset>
             <legend>Ratings (at least)</legend>
@@ -119,6 +108,7 @@
               </li>
             </ol>
           </fieldset>
+          <button type="button" class="transparent-button-grid" id="applyFiltersButton">Apply Filters</button>
         </form>
       </header>
 
@@ -131,10 +121,10 @@
       <footer class="main-footer" id="mainFooter">
         <p id="mainFooterResults"></p>
         <nav aria-label="Product Pages" class="pagination-section" id="paginationSection">
-            <button aria-label="Previous page" class="transparent-button" id="previousPage"><span class="material-icons">navigate_before</span></button>
+            <button type="button" aria-label="Previous page" class="transparent-button" id="previousPage"><span class="material-icons">navigate_before</span></button>
           <ol class="page-listing" id="pageListing">
           </ol>
-          <button aria-label="Next page" class="transparent-button" id="nextPage"><span class="material-icons">navigate_next</span></button>
+          <button type="button" aria-label="Next page" class="transparent-button" id="nextPage"><span class="material-icons">navigate_next</span></button>
         </nav>
       </footer>
     </main>

@@ -52,9 +52,9 @@ ul {
 ol {
   list-style-type: decimal;
 }
-ul.bullets, ol {
+/* ul.bullets, ol {
   padding-left: 4em;
-}
+} */
 ul.bullets ul, ul ol, ol ol {
   padding-left: 2em;
 }

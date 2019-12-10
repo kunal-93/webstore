@@ -1,5 +1,5 @@
 *{
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 .material-icons{
@@ -26,6 +26,28 @@ body{
 }
 .align-right{
     text-align: right;
+}
+.margin-vertical{
+    margin: 1em 0;
+}
+.margin-horizontal{
+    margin: 0 1em;
+}
+.margin-left{
+    margin-left: 1em;
+}
+.margin-right{
+    margin-right: 1em;
+}
+.margin-top{
+    margin-top: 1em;
+}
+.margin-bottom{
+    margin-bottom: 1em;
+}
+.space-even{
+    display: flex;
+    justify-content: space-evenly;
 }
 .header{
     /* display: grid; */
@@ -84,7 +106,12 @@ body{
     align-items: center;
 }
 .filter-panel{
+    position: fixed;
+    background-color: blanchedalmond;
     display: none;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 1em;
+    padding: 1em;
 }
 .main{
     margin: 5em 1em 0 1em;
@@ -199,6 +226,7 @@ body{
     align-items: center;
     text-align: left;
 }
+
 .offer-price{
     color: green;
     font-size: 1.6em;

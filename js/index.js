@@ -66,7 +66,7 @@ let productList =  [
             "description" : ["Windows 10 Home", "Intel® Core™ i5-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
                             "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 799.99,
-            "quantity" : 20,
+            "quantity" : 0,
             "category" : "laptop",
             "RAM" : [8, 16],
             "color" : ["black"],
@@ -123,7 +123,7 @@ let productList =  [
             "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 799.99,
-            "quantity" : 20,
+            "quantity" : 13,
             "category" : "laptop",
             "RAM" : [8, 16],
             "color" : ["white"],
@@ -137,7 +137,7 @@ let productList =  [
             "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                             "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
             "price" : 799.99,
-            "quantity" : 20,
+            "quantity" : 0,
             "category" : "laptop",
             "RAM" : [8, 16],
             "color" : ["grey"],
@@ -147,6 +147,7 @@ let productList =  [
     ]
 let currentPage = 1;
 let productsPerPage = 3;
+let filteredProducts = productList.slice();
 
 /*-------------Utility Funtions---------------*/
 
@@ -268,7 +269,7 @@ const getProductAsHTML = (product) => {
     Description: calculates number of pages and add them to inner HTML
 */
 const calculateAndShowNumberOfPages = (productsPerPage) =>{
-    const numberOfPages = Math.ceil(productList.length/productsPerPage);
+    const numberOfPages = Math.ceil(filteredProducts.length/productsPerPage);
     const pageListing = document.getElementById("pageListing");
     pageListing.innerHTML = `<li><a href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>`;
     for(let i=2; i<=numberOfPages; i++){
@@ -290,17 +291,17 @@ const showProductsByPage = (pageNumber, productsPerPage) => {
     const pageListing = document.getElementById("pageListing");
 
     const firstIndex = (pageNumber-1)*productsPerPage;
-    const lastIndex = Math.min(productList.length,firstIndex + productsPerPage);
+    const lastIndex = Math.min(filteredProducts.length,firstIndex + productsPerPage);
 
     // update product results at start of footer
-    document.getElementById("mainFooterResults").innerHTML = `Page ${pageNumber}, showing products ${firstIndex+1} to ${lastIndex} of ${productList.length} products`;
+    document.getElementById("mainFooterResults").innerHTML = `Page ${pageNumber}, showing products ${firstIndex+1} to ${lastIndex} of ${filteredProducts.length} products`;
     
     const productsSection = document.getElementById("products");    
     productsSection.innerHTML = ``;
-    productsSection.innerHTML += productList.slice(firstIndex, lastIndex).map(getProductAsHTML).join('');
+    productsSection.innerHTML += filteredProducts.slice(firstIndex, lastIndex).map(getProductAsHTML).join('');
 
     //disable prev page and next page link if needed
-    const numberOfPages = Math.ceil(productList.length/productsPerPage);
+    const numberOfPages = Math.ceil(filteredProducts.length/productsPerPage);
     
     if(pageNumber === 1){
         document.getElementById("previousPage").setAttribute("disabled", true);
@@ -316,22 +317,118 @@ const showProductsByPage = (pageNumber, productsPerPage) => {
     }
 }
 
-
 // Sorting order function
 const sortProducts = (criteria) => {
 
-    if (criteria == 'Ratings') {
-      // High to Low ratings
-      productList.sort((a, b) => b.rating - a.rating);
-    } else if (criteria == 'PriceAsc') {
-      // Low to High Price
-      productList.sort((a, b) => a.price - b.price);
+    if (criteria == 'RatingsAsc') {
+        // High to Low ratings
+        filteredProducts.sort((a, b) => a.rating - b.rating);
+    } 
+    else if(criteria == 'RatingsDesc'){
+        // Low to High ratings
+        filteredProducts.sort((a, b) => b.rating - a.rating);
+    }
+    else if (criteria == 'PriceAsc') {
+        // Low to High Price
+        filteredProducts.sort((a, b) => a.price - b.price);
     } else if (criteria == 'PriceDesc') {
-      // High to Low Price
-      productList.sort((a, b) => b.price - a.price);
+        // High to Low Price
+        filteredProducts.sort((a, b) => b.price - a.price);
     }
 
     showProductsByPage(1, productsPerPage);
+}
+
+
+const toggleFilterForm = () => {
+    const filterPanelStyle = document.getElementById("filterPanel").style;
+    if(filterPanelStyle.display == "grid"){
+        filterPanelStyle.display = "none";
+    }
+    else{
+        filterPanelStyle.display = "grid";
+    }
+}
+
+const clearAllFilters = () => {
+
+    /* UI clearance section */
+    // uncheck out of stock option
+    document.getElementById("excludeOutOfStock").checked = false;
+
+    // Clear All RAM options by name
+    document.querySelectorAll("input[name='ram']");
+
+    // Clear All Ratings Options by name
+    const allRAMCheckboxes = document.querySelectorAll("input[name='ram']");
+    for(let i=0; i<allRAMCheckboxes.length; i++){
+        allRAMCheckboxes[i].checked = false;
+    }
+
+    //Clear Price Range Fields
+    document.getElementById("MinPriceFilter").value = null;
+    document.getElementById("MaxPriceFilter").value = null;
+
+    //clear Ratings Field
+    const allRatingsRadio = document.querySelectorAll("input[name='rating']");
+    for(let i=0; i<allRatingsRadio.length; i++){
+        allRatingsRadio[i].checked = false;
+    }
+
+    const sortCriteria = document.getElementById('sortOrder').value;
+    sortProducts(sortCriteria);
+}
+
+const matchRAM = (product, RAMFilters) => {
+    
+}
+
+const applyNewFilters = () => {
+    
+    // Make a copy
+    filteredProducts = productList.slice();
+
+    // Remove out of stock Items
+    if(document.getElementById("excludeOutOfStock").checked)
+        filteredProducts = filteredProducts.filter(x => x.quantity > 0);
+    
+    // Apply RAM filters
+    const allRAMCheckboxes = document.querySelectorAll("input[name='ram']");
+    let RAMFilters = [];
+    for(let i=0; i<allRAMCheckboxes.length; i++){
+        const currentFilter = allRAMCheckboxes[i];
+        if(currentFilter.checked)
+            RAMFilters.push(parseInt(currentFilter.value));
+    }
+    if(RAMFilters.length>0)
+        filteredProducts = filteredProducts.filter( (product) => {
+            for(let i=0; i<RAMFilters.length; i++){
+                if(product.RAM.includes(RAMFilters[i]))
+                    return true;
+            }
+            return false;
+        });
+
+    // Apply Price Range Filter
+    let minPrice=0, maxPrice=99999999;
+    if(parseInt(document.getElementById("MinPriceFilter").value) > 0)
+        minPrice = parseInt(document.getElementById("MinPriceFilter").value);
+    else //convert negative value to zero
+        document.getElementById("MinPriceFilter").value = 0;
+
+    if(parseInt(document.getElementById("MaxPriceFilter").value) > minPrice)
+        maxPrice = parseInt(document.getElementById("MaxPriceFilter").value);
+    else //convert maxPrice to Highest since it cannot be smaller than minPrice
+        document.getElementById("MaxPriceFilter").value = maxPrice;
+
+    filteredProducts = filteredProducts.filter(x => minPrice <= x.price && x.price <= maxPrice);
+    
+
+    console.log(filteredProducts.length);
+
+
+    // hide filter form
+    toggleFilterForm();
 }
 
 window.addEventListener("load", () => {
@@ -354,13 +451,17 @@ window.addEventListener("load", () => {
         showProductsByPage(currentPage + 1, productsPerPage);
     });
 
+    document.getElementById("clearFiltersButton").addEventListener("click", clearAllFilters);
+
     // call to show products on page 1 for the first load
     showProductsByPage(currentPage, productsPerPage);
 
     
-    const filterButton = document.getElementById("filterButton");
-   
-    document.getElementById('sortOrder').addEventListener('change', () =>{
+    document.getElementById("filterButton").addEventListener("click", toggleFilterForm);
+    
+    document.getElementById("applyFiltersButton").addEventListener("click", applyNewFilters);
+
+    document.getElementById('sortOrder').addEventListener('change', () => {
         // sort dropdown value
         const sortCriteria = document.getElementById('sortOrder').value;
         sortProducts(sortCriteria);
