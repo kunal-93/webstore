@@ -8,7 +8,7 @@ let productList =  [
     {
         "id" : 1,
         "name" : "Galaxy S7",
-        "image" : "smartphones/Product_1/black_main.jpg",
+        "image" : "smartphones/product_1/black_main.jpg",
         "description" : ["Android 8.0", "Qualcomm Snapdragon 820 2.15GHz, 1.6GHz, Quad-Core", "4GB RAM",
                         "5.1 2560 x 1440 (Quad HD) Super Amoled Display", "32GB ROM"],
         "price" : 399.99,
@@ -23,7 +23,7 @@ let productList =  [
     {
         "id" : 2,
         "name" : "Galaxy S10",
-        "image" : "smartphones/Product_2/black_main.jpg",
+        "image" : "smartphones/product_2/black_main.jpg",
         "description" : ["An immersive Cinematic Infinity Display", "Android 9.0", "Qualcomm Snapdragon 820 2.15GHz, 1.6GHz, Quad-Core", "4GB RAM",
                         "5.1 2560 x 1440 (Quad HD) Super Amoled Display", "128GB ROM"],
         "price" : 699.99,
@@ -38,7 +38,7 @@ let productList =  [
     {
         "id" : 3,
         "name" : "Galaxy A70",
-        "image" : "smartphones/Product_3/blue_main.jpg",
+        "image" : "smartphones/product_3/blue_main.jpg",
         "description" : ["Rear Camera: Main: 32MP, F1.7 Ultra Wide: 8MP, F2.2 (123°)", "Android 9.0", "Display: 6.7-inch Full HD+ (1080x2400) Super AMOLED Infinity-U Display", "8GB RAM",
                         "128GB ROM"],
         "price" : 458.99,
@@ -53,7 +53,7 @@ let productList =  [
     {
         "id" : 4,
         "name" : "Galaxy A50",
-        "image" : "smartphones/Product_4/blue_main.jpg",
+        "image" : "smartphones/product_4/blue_main.jpg",
         "description" : ["FHD+ multi-touch capacitive touchscreen with 2340 x 1080 pixels resolution", "Android 9.0", "Display: 5.7-inch", "4GB RAM",
                         "64GB ROM"],
         "price" : 479.99,
@@ -68,7 +68,7 @@ let productList =  [
     {
         "id" : 5,
         "name" : "Galaxy A30",
-        "image" : "smartphones/Product_5/white_main.jpg",
+        "image" : "smartphones/product_5/white_main.jpg",
         "description" : ['Display: 16.21cm (6.4") FHD+ Infinity-U Super AMOLED Display', "Processor Exynos 7904 Octa-Core", "Android 9.0", "4GB RAM",
                         "64GB ROM"],
         "price" : 279.99,
@@ -83,7 +83,7 @@ let productList =  [
     {
         "id" : 6,
         "name" : "Galaxy A20",
-        "image" : "smartphones/Product_6/blue_main.jpg",
+        "image" : "smartphones/product_6/blue_main.jpg",
         "description" : ['Display: 16.21cm (6.4") FHD+ Infinity-U Super AMOLED Display', "Dual SIM 6.5''HD+ Snapdragon 450", "Android 9.0", "4GB RAM",
                         "64GB ROM"],
         "price" : 229.99,
@@ -98,7 +98,7 @@ let productList =  [
     {
         "id" : 7,
         "name" : "Galaxy A10",
-        "image" : "smartphones/Product_7/red_main.jpg",
+        "image" : "smartphones/product_7/red_main.jpg",
         "description" : ['Display: 16.21cm (6.4") FHD+ Infinity-U Super AMOLED Display', "Dual SIM 6.5''HD+ Snapdragon 450", "Android 9.0", "4GB RAM",
                         "64GB ROM"],
         "price" : 289.99,
@@ -113,7 +113,7 @@ let productList =  [
     {
         "id" : 8,
         "name" : "Galaxy S8",
-        "image" : "smartphones/Product_8/black_main.jpg",
+        "image" : "smartphones/product_8/black_main.jpg",
         "description" : ['Display: 16.21cm (5.8")', "Snapdragon 450", "Android 9.0", "4GB RAM",
                         "64GB ROM"],
         "price" : 309.99,
@@ -128,7 +128,7 @@ let productList =  [
     {
         "id" : 9,
         "name" : "Galaxy Prime 3 J3",
-        "image" : "smartphones/Product_9/black_main.jpg",
+        "image" : "smartphones/product_9/black_main.jpg",
         "description" : ['Display: 16.21cm (5.8")', "Snapdragon 450", "Android 9.0", "4GB RAM",
                         "64GB ROM"],
         "price" : 399.99,
@@ -143,7 +143,7 @@ let productList =  [
     {
         "id" : 10,
         "name" : "Galaxy S10e",
-        "image" : "smartphones/Product_10/black_main.jpg",
+        "image" : "smartphones/product_10/black_main.jpg",
         "description" : ['Display: 16.21cm (5")', "Snapdragon 450", "Android 8.0", "4GB RAM",
                         "16GB ROM"],
         "price" : 428.99,
@@ -158,7 +158,7 @@ let productList =  [
     {
         "id" : 11,
         "name" : "Notebook 9 Pen",
-        "image" : "laptops/Product_1/silver_main.jpg",
+        "image" : "laptops/product_1/silver_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
                         "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 899.99,
@@ -174,7 +174,7 @@ let productList =  [
     {
         "id" : 12,
         "name" : "Notebook 9 Pen Gaming",
-        "image" : "laptops/Product_2/blue_main.jpg",
+        "image" : "laptops/product_2/blue_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1060 with 6 GB Dedicated Memory", "16 GB, DDR4 SDRAM", "1 TB HDD, 256 GB SSD",
                         "30-day Microsoft Office trial included"],
@@ -191,7 +191,7 @@ let productList =  [
     {
         "id" : 13,
         "name" : "Notebook 9 Pen Pro",
-        "image" : "laptops/Product_3/silver_main.jpg",
+        "image" : "laptops/product_3/silver_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 999.99,
@@ -206,7 +206,7 @@ let productList =  [
     {
         "id" : 14,
         "name" : "Notebook 7 Pen",
-        "image" : "laptops/Product_4/silver_main.jpg",
+        "image" : "laptops/product_4/silver_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 1399.99,
@@ -221,7 +221,7 @@ let productList =  [
     {
         "id" : 15,
         "name" : "Notebook 7 Pen Gaming",
-        "image" : "laptops/Product_5/black_main.jpg",
+        "image" : "laptops/product_5/black_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i5-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
                         "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 1099.99,
@@ -236,7 +236,7 @@ let productList =  [
     {
         "id" : 16,
         "name" : "Notebook 7 Pen Pro",
-        "image" : "laptops/Product_6/black_main.jpg",
+        "image" : "laptops/product_6/black_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1060 with 6 GB Dedicated Memory", "16 GB, DDR4 SDRAM", "1 TB HDD, 256 GB SSD",
                         "30-day Microsoft Office trial included"],
@@ -252,7 +252,7 @@ let productList =  [
     {
         "id" : 17,
         "name" : "Notebook Odyssey",
-        "image" : "laptops/Product_7/silver_main.jpg",
+        "image" : "laptops/product_7/silver_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 1899.99,
@@ -267,7 +267,7 @@ let productList =  [
     {
         "id" : 18,
         "name" : "Notebook Odyssey Gaming",
-        "image" : "laptops/Product_8/black_main.jpg",
+        "image" : "laptops/product_8/black_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 2060 with 8 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 1999.99,
@@ -282,7 +282,7 @@ let productList =  [
     {
         "id" : 19,
         "name" : "Notebook 5",
-        "image" : "laptops/Product_9/white_main.jpg",
+        "image" : "laptops/product_9/white_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 749.99,
@@ -297,7 +297,7 @@ let productList =  [
     {
         "id" : 20,
         "name" : "Notebook Flash",
-        "image" : "laptops/Product_10/grey_main.jpg",
+        "image" : "laptops/product_10/grey_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 699.99,
