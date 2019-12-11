@@ -7,6 +7,146 @@ const settings = {
 let productList =  [
     {
         "id" : 1,
+        "name" : "Galaxy S7",
+        "image" : "smartphones/Product_1/black_main.jpg",
+        "description" : ["Android 8.0", "Qualcomm Snapdragon 820 2.15GHz, 1.6GHz, Quad-Core", "4GB RAM",
+                        "5.1 2560 x 1440 (Quad HD) Super Amoled Display", "32GB ROM"],
+        "price" : 399.99,
+        "quantity" : 3,
+        "category" : "smartphones",
+        "RAM" : [4],
+        "color" : ["black"],
+        "rating": 2.7,
+        "ratingCount" : 480        
+    },
+    {
+        "id" : 2,
+        "name" : "Galaxy S10",
+        "image" : "smartphones/Product_2/black_main.jpg",
+        "description" : ["An immersive Cinematic Infinity Display", "Android 9.0", "Qualcomm Snapdragon 820 2.15GHz, 1.6GHz, Quad-Core", "4GB RAM",
+                        "5.1 2560 x 1440 (Quad HD) Super Amoled Display", "128GB ROM"],
+        "price" : 699.99,
+        "quantity" : 8,
+        "category" : "smartphones",
+        "RAM" : [4],
+        "color" : ["black", "blue", "white"],
+        "rating": 4.7,
+        "ratingCount" : 1570        
+    },
+    {
+        "id" : 3,
+        "name" : "Galaxy A70",
+        "image" : "smartphones/Product_3/blue_main.jpg",
+        "description" : ["Rear Camera: Main: 32MP, F1.7 Ultra Wide: 8MP, F2.2 (123°)", "Android 9.0", "Display: 6.7-inch Full HD+ (1080x2400) Super AMOLED Infinity-U Display", "8GB RAM",
+                        "128GB ROM"],
+        "price" : 458.99,
+        "quantity" : 15,
+        "category" : "smartphones",
+        "RAM" : [8],
+        "color" : ["blue", "black", "white"],
+        "rating": 4.3,
+        "ratingCount" :2003        
+    },
+    {
+        "id" : 4,
+        "name" : "Galaxy A50",
+        "image" : "smartphones/Product_4/blue_main.jpg",
+        "description" : ["FHD+ multi-touch capacitive touchscreen with 2340 x 1080 pixels resolution", "Android 9.0", "Display: 5.7-inch", "4GB RAM",
+                        "64GB ROM"],
+        "price" : 479.99,
+        "quantity" : 23,
+        "category" : "smartphones",
+        "RAM" : [4, 8],
+        "color" : ["blue", "black", "white"],
+        "rating": 4.1,
+        "ratingCount" :203        
+    },
+    {
+        "id" : 5,
+        "name" : "Galaxy A30",
+        "image" : "smartphones/Product_5/white_main.jpg",
+        "description" : ['Display: 16.21cm (6.4") FHD+ Infinity-U Super AMOLED Display', "Processor Exynos 7904 Octa-Core", "Android 9.0", "4GB RAM",
+                        "64GB ROM"],
+        "price" : 279.99,
+        "quantity" : 8,
+        "category" : "smartphones",
+        "RAM" : [4],
+        "color" : ["white", "black", "blue"],
+        "rating": 3.7,
+        "ratingCount" : 203        
+    },
+    {
+        "id" : 6,
+        "name" : "Galaxy A20",
+        "image" : "smartphones/Product_6/blue_main.jpg",
+        "description" : ['Display: 16.21cm (6.4") FHD+ Infinity-U Super AMOLED Display', "Dual SIM 6.5''HD+ Snapdragon 450", "Android 9.0", "4GB RAM",
+                        "64GB ROM"],
+        "price" : 229.99,
+        "quantity" : 2,
+        "category" : "smartphones",
+        "RAM" : [4],
+        "color" : ["blue", "black"],
+        "rating": 3.5,
+        "ratingCount" : 393        
+    },
+    {
+        "id" : 7,
+        "name" : "Galaxy A10",
+        "image" : "smartphones/Product_7/red_main.jpg",
+        "description" : ['Display: 16.21cm (6.4") FHD+ Infinity-U Super AMOLED Display', "Dual SIM 6.5''HD+ Snapdragon 450", "Android 9.0", "4GB RAM",
+                        "64GB ROM"],
+        "price" : 289.99,
+        "quantity" : 2,
+        "category" : "smartphones",
+        "RAM" : [4],
+        "color" : ["red", "black"],
+        "rating": 3.5,
+        "ratingCount" : 439        
+    },
+    {
+        "id" : 8,
+        "name" : "Galaxy S8",
+        "image" : "smartphones/Product_8/black_main.jpg",
+        "description" : ['Display: 16.21cm (5.8")', "Snapdragon 450", "Android 9.0", "4GB RAM",
+                        "64GB ROM"],
+        "price" : 309.99,
+        "quantity" : 5,
+        "category" : "smartphones",
+        "RAM" : [4],
+        "color" : ["black"],
+        "rating": 3.5,
+        "ratingCount" : 973        
+    },
+    {
+        "id" : 9,
+        "name" : "Galaxy S10e",
+        "image" : "smartphones/Product_9/black_main.jpg",
+        "description" : ['Display: 16.21cm (5.8")', "Snapdragon 450", "Android 9.0", "4GB RAM",
+                        "64GB ROM"],
+        "price" : 399.99,
+        "quantity" : 5,
+        "category" : "smartphones",
+        "RAM" : [4],
+        "color" : ["black"],
+        "rating": 3.5,
+        "ratingCount" : 563        
+    },
+    {
+        "id" : 10,
+        "name" : "Galaxy Prime 3 J3",
+        "image" : "smartphones/Product_10/black_main.jpg",
+        "description" : ['Display: 16.21cm (5")', "Snapdragon 450", "Android 8.0", "4GB RAM",
+                        "16GB ROM"],
+        "price" : 179.99,
+        "quantity" : 5,
+        "category" : "smartphones",
+        "RAM" : [4],
+        "color" : ["black"],
+        "rating": 2.3,
+        "ratingCount" : 5903        
+    },
+    {
+        "id" : 11,
         "name" : "Notebook 9 Pen",
         "image" : "laptops/Product_1/silver_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
@@ -21,7 +161,7 @@ let productList =  [
         "ratingCount" : 200
     },
     {
-        "id" : 2,
+        "id" : 12,
         "name" : "Notebook 9 Pen Gaming",
         "image" : "laptops/Product_2/blue_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
@@ -37,7 +177,7 @@ let productList =  [
         "ratingCount" : 10
     },
     {
-        "id" : 3,
+        "id" : 13,
         "name" : "Notebook 9 Pen Pro",
         "image" : "laptops/Product_3/silver_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
@@ -51,7 +191,7 @@ let productList =  [
         "ratingCount" : 26    
     },
     {
-        "id" : 4,
+        "id" : 14,
         "name" : "Notebook 7 Pen",
         "image" : "laptops/Product_4/silver_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
@@ -62,10 +202,10 @@ let productList =  [
         "RAM" : [4,8],
         "color" : ["silver"],
         "rating": 3.3,
-        "ratingCount" : 570 
+        "ratingCount" : 240 
     },
     {
-        "id" : 5,
+        "id" : 15,
         "name" : "Notebook 7 Pen Gaming",
         "image" : "laptops/Product_5/black_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i5-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
@@ -76,10 +216,10 @@ let productList =  [
         "RAM" : [12, 16],
         "color" : ["black"],
         "rating": 3.3,
-        "ratingCount" : 570 
+        "ratingCount" : 903 
     },
     {
-        "id" : 6,
+        "id" : 16,
         "name" : "Notebook 7 Pen Pro",
         "image" : "laptops/Product_6/black_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
@@ -91,10 +231,10 @@ let productList =  [
         "RAM" : [8, 12],
         "color" : ["black"],
         "rating": 3.3,
-        "ratingCount" : 570   
+        "ratingCount" : 780   
     },
     {
-        "id" : 7,
+        "id" : 17,
         "name" : "Notebook Odyssey",
         "image" : "laptops/Product_7/silver_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
@@ -105,10 +245,10 @@ let productList =  [
         "RAM" : [8, 12],
         "color" : ["silver"],
         "rating": 3.3,
-        "ratingCount" : 570        
+        "ratingCount" : 3470        
     },
     {
-        "id" : 8,
+        "id" : 18,
         "name" : "Notebook Odyssey Gaming",
         "image" : "laptops/Product_8/black_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
@@ -119,10 +259,10 @@ let productList =  [
         "RAM" : [8, 16],
         "color" : ["black", "white"],
         "rating": 3.3,
-        "ratingCount" : 570        
+        "ratingCount" : 1340        
     },
     {
-        "id" : 9,
+        "id" : 19,
         "name" : "Notebook 5",
         "image" : "laptops/Product_9/white_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
@@ -136,7 +276,7 @@ let productList =  [
         "ratingCount" : 570        
     },
     {
-        "id" : 10,
+        "id" : 20,
         "name" : "Notebook Flash",
         "image" : "laptops/Product_10/grey_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
@@ -147,92 +287,9 @@ let productList =  [
         "RAM" : [4, 8],
         "color" : ["grey"],
         "rating": 3.3,
-        "ratingCount" : 570        
-    },
-    {
-        "id" : 11,
-        "name" : "Galaxy S7",
-        "image" : "smartphones/Product_11/black_main.jpg",
-        "description" : ["Android 8.0", "Qualcomm Snapdragon 820 2.15GHz, 1.6GHz, Quad-Core", "4GB RAM",
-                        "5.1 2560 x 1440 (Quad HD) Super Amoled Display", "32GB ROM"],
-        "price" : 399.99,
-        "quantity" : 3,
-        "category" : "smartphones",
-        "RAM" : [4],
-        "color" : ["black"],
-        "rating": 2.7,
-        "ratingCount" : 480        
-    },
-    {
-        "id" : 12,
-        "name" : "Galaxy S10",
-        "image" : "smartphones/Product_12/black_main.jpg",
-        "description" : ["An immersive Cinematic Infinity Display", "Android 9.0", "Qualcomm Snapdragon 820 2.15GHz, 1.6GHz, Quad-Core", "4GB RAM",
-                        "5.1 2560 x 1440 (Quad HD) Super Amoled Display", "128GB ROM"],
-        "price" : 699.99,
-        "quantity" : 8,
-        "category" : "smartphones",
-        "RAM" : [4],
-        "color" : ["black", "blue", "white"],
-        "rating": 4.7,
-        "ratingCount" : 1570        
-    },
-    {
-        "id" : 13,
-        "name" : "Galaxy A70",
-        "image" : "smartphones/Product_13/blue_main.jpg",
-        "description" : ["Rear Camera: Main: 32MP, F1.7 Ultra Wide: 8MP, F2.2 (123°)", "Android 9.0", "Display: 6.7-inch Full HD+ (1080x2400) Super AMOLED Infinity-U Display", "8GB RAM",
-                        "128GB ROM"],
-        "price" : 458.99,
-        "quantity" : 15,
-        "category" : "smartphones",
-        "RAM" : [8],
-        "color" : ["blue", "black", "white"],
-        "rating": 4.3,
-        "ratingCount" :2003        
-    },
-    {
-        "id" : 14,
-        "name" : "Galaxy A50",
-        "image" : "smartphones/Product_14/blue_main.jpg",
-        "description" : ["FHD+ multi-touch capacitive touchscreen with 2340 x 1080 pixels resolution", "Android 9.0", "Display: 5.7-inch", "4GB RAM",
-                        "64GB ROM"],
-        "price" : 479.99,
-        "quantity" : 23,
-        "category" : "smartphones",
-        "RAM" : [4, 8],
-        "color" : ["blue", "black", "white"],
-        "rating": 4.1,
-        "ratingCount" :203        
-    },
-    {
-        "id" : 15,
-        "name" : "Galaxy A30",
-        "image" : "smartphones/Product_15/white_main.jpg",
-        "description" : ['Display: 16.21cm (6.4") FHD+ Infinity-U Super AMOLED Display', "Processor Exynos 7904 Octa-Core", "Android 9.0", "4GB RAM",
-                        "64GB ROM"],
-        "price" : 279.99,
-        "quantity" : 8,
-        "category" : "smartphones",
-        "RAM" : [4],
-        "color" : ["white", "black", "blue"],
-        "rating": 3.7,
-        "ratingCount" : 203        
-    },
-    {
-        "id" : 16,
-        "name" : "Galaxy A20",
-        "image" : "smartphones/Product_16/white_main.jpg",
-        "description" : ['Display: 16.21cm (6.4") FHD+ Infinity-U Super AMOLED Display', "Dual SIM 6.5''HD+ Snapdragon 450", "Android 9.0", "4GB RAM",
-                        "64GB ROM"],
-        "price" : 229.99,
-        "quantity" : 2,
-        "category" : "smartphones",
-        "RAM" : [4],
-        "color" : ["blue"],
-        "rating": 3.5,
-        "ratingCount" : 3403        
+        "ratingCount" : 320        
     }
+
     
 ]
 let currentPage = 1;
@@ -662,32 +719,10 @@ window.addEventListener("load", () => {
     document.getElementById('sortOrder').addEventListener('change', () => {
         // sort dropdown value
         const sortCriteria = document.getElementById('sortOrder').value;
-        sortProducts(sortCriteria);
-    });
-
-    //Retrieve all the files from the FileList object
-    var files = evt.target.files; 
-
-    if (files) {
-        for (var i=0, f; f=files[i]; i++) {
-              var r = new FileReader();
-            r.onload = (function(f) {
-                return function(e) {
-                    var contents = e.target.result;
-                    alert( "Got the file.n" 
-                          +"name: " + f.name + "n"
-                          +"type: " + f.type + "n"
-                          +"size: " + f.size + " bytesn"
-                          + "starts with: " + contents.substr(1, contents.indexOf("n"))
-                    ); 
-                };
-            })(f);
-
-            r.readAsText(f);
-        }   
-    } else {
-          alert("Failed to load files"); 
-    }
         
+        sortProducts(sortCriteria);
+
+        renderProducts();
+    });      
     
 });  
