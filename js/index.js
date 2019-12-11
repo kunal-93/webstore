@@ -17,7 +17,8 @@ let productList =  [
         "RAM" : [4],
         "color" : ["black"],
         "rating": 2.7,
-        "ratingCount" : 480        
+        "ratingCount" : 480,
+        "selectedColorIndex": 0
     },
     {
         "id" : 2,
@@ -31,7 +32,8 @@ let productList =  [
         "RAM" : [4],
         "color" : ["black", "blue", "white"],
         "rating": 4.7,
-        "ratingCount" : 1570        
+        "ratingCount" : 1570,
+        "selectedColorIndex": 0      
     },
     {
         "id" : 3,
@@ -45,7 +47,8 @@ let productList =  [
         "RAM" : [8],
         "color" : ["blue", "black", "white"],
         "rating": 4.3,
-        "ratingCount" :2003        
+        "ratingCount" :2003,
+        "selectedColorIndex": 0       
     },
     {
         "id" : 4,
@@ -59,7 +62,8 @@ let productList =  [
         "RAM" : [4, 8],
         "color" : ["blue", "black", "white"],
         "rating": 4.1,
-        "ratingCount" :203        
+        "ratingCount" :203,
+        "selectedColorIndex": 0     
     },
     {
         "id" : 5,
@@ -73,7 +77,8 @@ let productList =  [
         "RAM" : [4],
         "color" : ["white", "black", "blue"],
         "rating": 3.7,
-        "ratingCount" : 203        
+        "ratingCount" : 203,
+        "selectedColorIndex": 0     
     },
     {
         "id" : 6,
@@ -87,7 +92,8 @@ let productList =  [
         "RAM" : [4],
         "color" : ["blue", "black"],
         "rating": 3.5,
-        "ratingCount" : 393        
+        "ratingCount" : 393,
+        "selectedColorIndex": 0      
     },
     {
         "id" : 7,
@@ -101,7 +107,8 @@ let productList =  [
         "RAM" : [4],
         "color" : ["red", "black"],
         "rating": 3.5,
-        "ratingCount" : 439        
+        "ratingCount" : 439,
+        "selectedColorIndex": 0      
     },
     {
         "id" : 8,
@@ -115,11 +122,12 @@ let productList =  [
         "RAM" : [4],
         "color" : ["black"],
         "rating": 3.5,
-        "ratingCount" : 973        
+        "ratingCount" : 973,
+        "selectedColorIndex": 0  
     },
     {
         "id" : 9,
-        "name" : "Galaxy S10e",
+        "name" : "Galaxy Prime 3 J3",
         "image" : "smartphones/Product_9/black_main.jpg",
         "description" : ['Display: 16.21cm (5.8")', "Snapdragon 450", "Android 9.0", "4GB RAM",
                         "64GB ROM"],
@@ -129,21 +137,23 @@ let productList =  [
         "RAM" : [4],
         "color" : ["black"],
         "rating": 3.5,
-        "ratingCount" : 563        
+        "ratingCount" : 563,
+        "selectedColorIndex": 0    
     },
     {
         "id" : 10,
-        "name" : "Galaxy Prime 3 J3",
+        "name" : "Galaxy S10e",
         "image" : "smartphones/Product_10/black_main.jpg",
         "description" : ['Display: 16.21cm (5")', "Snapdragon 450", "Android 8.0", "4GB RAM",
                         "16GB ROM"],
-        "price" : 179.99,
-        "quantity" : 5,
+        "price" : 428.99,
+        "quantity" : 3,
         "category" : "smartphones",
         "RAM" : [4],
         "color" : ["black"],
-        "rating": 2.3,
-        "ratingCount" : 5903        
+        "rating": 4.8,
+        "ratingCount" : 5903,
+        "selectedColorIndex": 0     
     },
     {
         "id" : 11,
@@ -158,7 +168,8 @@ let productList =  [
         "RAM" : [8, 12],
         "color" : ["silver", "blue"],
         "rating": 3.4,
-        "ratingCount" : 200
+        "ratingCount" : 200,
+        "selectedColorIndex": 0
     },
     {
         "id" : 12,
@@ -174,7 +185,8 @@ let productList =  [
         "RAM" : [8, 12, 16],
         "color" : ["blue", "Black"],
         "rating": 4.7,
-        "ratingCount" : 10
+        "ratingCount" : 10,
+        "selectedColorIndex": 0
     },
     {
         "id" : 13,
@@ -188,7 +200,8 @@ let productList =  [
         "RAM" : [8, 12],
         "color" : ["silver"],
         "rating": 4.9,
-        "ratingCount" : 26    
+        "ratingCount" : 26,
+        "selectedColorIndex": 0
     },
     {
         "id" : 14,
@@ -202,7 +215,8 @@ let productList =  [
         "RAM" : [4,8],
         "color" : ["silver"],
         "rating": 3.3,
-        "ratingCount" : 240 
+        "ratingCount" : 240,
+        "selectedColorIndex": 0
     },
     {
         "id" : 15,
@@ -216,7 +230,8 @@ let productList =  [
         "RAM" : [12, 16],
         "color" : ["black"],
         "rating": 3.3,
-        "ratingCount" : 903 
+        "ratingCount" : 903,
+        "selectedColorIndex": 0
     },
     {
         "id" : 16,
@@ -231,7 +246,8 @@ let productList =  [
         "RAM" : [8, 12],
         "color" : ["black"],
         "rating": 3.3,
-        "ratingCount" : 780   
+        "ratingCount" : 780,
+        "selectedColorIndex": 0  
     },
     {
         "id" : 17,
@@ -245,7 +261,8 @@ let productList =  [
         "RAM" : [8, 12],
         "color" : ["silver"],
         "rating": 3.3,
-        "ratingCount" : 3470        
+        "ratingCount" : 3470,
+        "selectedColorIndex": 0  
     },
     {
         "id" : 18,
@@ -259,7 +276,8 @@ let productList =  [
         "RAM" : [8, 16],
         "color" : ["black", "white"],
         "rating": 3.3,
-        "ratingCount" : 1340        
+        "ratingCount" : 1340,
+        "selectedColorIndex": 0      
     },
     {
         "id" : 19,
@@ -273,7 +291,8 @@ let productList =  [
         "RAM" : [4, 8],
         "color" : ["white"],
         "rating": 3.3,
-        "ratingCount" : 570        
+        "ratingCount" : 570,
+        "selectedColorIndex": 0     
     },
     {
         "id" : 20,
@@ -287,14 +306,17 @@ let productList =  [
         "RAM" : [4, 8],
         "color" : ["grey"],
         "rating": 3.3,
-        "ratingCount" : 320        
+        "ratingCount" : 320,
+        "selectedColorIndex": 0    
     }
 
     
 ]
 let currentPage = 1;
-let productsPerPage = 3;
+let productsPerPage = 5;
 let filteredProducts = productList.slice();
+const laptopAltImageList = [`main`, `back`, `angle`];
+const smartphoneAltImageList = [`main`, `front`, `back`, `side`];
 
 /*-------------Utility Funtions---------------*/
 
@@ -359,26 +381,72 @@ const isBuyDisabled = (quantity) => {
     return ''
 }
 
-const getColorSwatch = (product_color) => {
+/*
+    name: getColorSwatch
+    param:
+        id: int
+        color: string
+    return: string
+    description: This method returns the appropriate swatch color and name swatch with id and color
+*/
+const getColorSwatch = (id, color) => {
     return `
         <li>
-            <label class="product-color ${product_color}">
-                <input type="radio" name="colour" value="${product_color}"> <!-- default -->
-                <span>${product_color}</span>
+            <label class="product-color ${color}">
+                <input type="radio" name="color_${id + "_" + color}" value="${color}">
+                <span>${color}</span>
             </label>
         </li>
     `
 }
+/*
+    function: getProductAltImagesAsHTML
+    Param:
+        product: object
+        selectedColorIndex: Integer
+    return: string
+    Description: generates product image gallery
+*/
+const getProductAltImagesAsHTML = product => {
+    const selectedColor = product.color[product.selectedColorIndex];
+    let imageDirectory = product.image.split('/').slice(0,-1).join('/');
+    
+    //Add img path prefix from settings
+    imageDirectory = settings.imagePath + imageDirectory;
+    let productAltImageList;
+    let outputList = [];
+    // Laptops have 3 alt images for every color 
+    // Smartphones have 4 alt images for every color
+    product.category == "laptop" ? productAltImageList = laptopAltImageList : productAltImageList = smartphoneAltImageList;
+    
+    productAltImageList.forEach(postFix => {
+        imgName = `${selectedColor}_${postFix}.jpg`;
+        imagePath = `${imageDirectory}/${imgName}`;
+        outputList.push(imagePath);
+    });
+
+    //Make HTML img Element for all images
+    const AltImagesHTMLList = outputList.map( imgPath => 
+        `<img class="product-alt-image" name="${product.id}_altImage" src=${imgPath} alt="Product Alternate Image"></img>`).join('\n');
+
+    return AltImagesHTMLList;
+}
+
 /*  Function: getProductAsHTML
-    Parameters: product: Object
+    Parameters: 
+        product: Object
+        selectedColorIndex: Integer
     Return: String
     Description: dynamically creates product HTML using product attributes from data
 */
-const getProductAsHTML = (product) => {
+const getProductAsHTML = product => {
     return `
     <article class="product">
         <header class="bottom-border">
-            <div class="product-image-container"><img class="product-image" src=${settings.imagePath + product.image} alt="Product Image"><div>
+            <div class="product-image-container"><img class="product-image" id="${product.id}mainImage"src=${settings.imagePath + product.image} alt="Product Image"><div>
+            <ul class="product-gallery" id="${product.id}_productGallery">
+                ${getProductAltImagesAsHTML(product)}
+            </ul>
             <div class="product-header-grid">
                 ${getProductStatusbyQtyAsHTML(product.quantity)}
                 <div>
@@ -388,8 +456,10 @@ const getProductAsHTML = (product) => {
                 <fieldset class="product-colors-block">
                     <legend>colours</legend>
                     <div>
-                        <ul class="swatches">
-                            ${product.color.map(getColorSwatch).join('\n')}
+                        <ul class="swatches" id="swatches">
+                            ${product.color.map( color => {
+                                return getColorSwatch(product.id, color);
+                            }).join('\n')}
                         </ul>
                     <output id="selected"></output>
                     </div>
@@ -452,9 +522,13 @@ const showProductsByPage = (pageNumber, productsPerPage) => {
     // update product results at start of footer
     document.getElementById("mainFooterResults").innerHTML = `Page ${pageNumber}, showing products ${firstIndex+1} to ${lastIndex} of ${filteredProducts.length} products`;
     
+    // Render products on the page
     const productsSection = document.getElementById("products");    
     productsSection.innerHTML = ``;
     productsSection.innerHTML += filteredProducts.slice(firstIndex, lastIndex).map(getProductAsHTML).join('');
+
+    // Add event listener to swatches
+
 
     //disable prev page and next page link if needed
     const numberOfPages = Math.ceil(filteredProducts.length/productsPerPage);
@@ -647,6 +721,28 @@ const renderProducts = (filteredProducts) => {
     showProductsByPage(currentPage, productsPerPage);
 }
 
+const updateProductSelectedColor = (productID, newColor) => {
+    
+    filteredProducts.forEach(product => {
+        if(product.id == productID){
+            //Update the main Image according to new color
+            const newImageName = `${newColor}_main.jpg`;
+            const baseDir = `${settings.imagePath}${product.image.split('/').slice(0,-1).join('/')}`;
+            document.getElementById(`${productID}mainImage`).src = `${baseDir}/${newImageName}`;
+
+            for(let i=0; i<product.color.length; i++){
+                if(product.color[i] == newColor){
+                    product.selectedColorIndex = i;
+                    
+                    const galleryID = `${productID}_productGallery`;
+                    // update the gallery HTML element
+                    document.getElementById(galleryID).innerHTML = getProductAltImagesAsHTML(product);
+                }
+            } 
+        }
+    });
+}
+
 window.addEventListener("load", () => {
     
     /** Adding listeners to Header Elements*/
@@ -673,6 +769,30 @@ window.addEventListener("load", () => {
     });
 
     calculateAndShowNumberOfPages(productsPerPage);
+
+    // Adding event listener to product parent to handle clicks on swatches and alt images
+    document.getElementById("products").addEventListener("click", event => {
+        if(typeof(event.target.name) == "undefined")
+            return;
+
+        // update product gallery based on selected swatch
+        if(event.target.name.startsWith("color_"))
+        {
+            const productID = parseInt(event.target.name.split('_')[1]);
+            const selectedColor = event.target.name.split('_')[2];
+            
+            //update product selected Color in the data
+            updateProductSelectedColor(productID, selectedColor);
+        }
+
+        //update product Image
+        if(event.target.name.endsWith("_altImage")){
+            console.log(event.target.src);
+            const productId = event.target.name.split('_')[0];
+            document.getElementById(`${productId}mainImage`).src = event.target.src;
+        }
+
+    });
     
     // add listener to page listing parent
     const paginationParent = document.getElementById("pageListing");
@@ -703,7 +823,6 @@ window.addEventListener("load", () => {
     // call to show products on page 1 for the first load
     showProductsByPage(currentPage, productsPerPage);
 
-    
     document.getElementById("filterButton").addEventListener("click", toggleFilterForm);
     
     document.getElementById("applyFiltersButton").addEventListener("click", () => {

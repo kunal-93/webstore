@@ -173,7 +173,17 @@ body{
 .product-image{
     max-height: 30vh;
     max-width: 100%;
-    margin: 1em;
+    margin: .5em;
+}
+.product-gallery{
+    display: flex;
+    justify-content: space-evenly;
+    overflow: scroll;
+    margin: 1em 0;
+    text-align: center;
+}
+.product-alt-image{
+    max-height: 10vh;
 }
 .product h3{
     font-size: 1.8em;
