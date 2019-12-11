@@ -443,7 +443,7 @@ const getProductAsHTML = product => {
     return `
     <article class="product">
         <header class="bottom-border">
-            <div class="product-image-container"><img class="product-image" id="${product.id}mainImage"src=${settings.imagePath + product.image} alt="Product Image"><div>
+            <div class="product-image-container"><img class="product-image" id="${product.id}mainImage" src=${settings.imagePath + product.image} alt="Product Image"><div>
             <ul class="product-gallery" id="${product.id}_productGallery">
                 ${getProductAltImagesAsHTML(product)}
             </ul>
