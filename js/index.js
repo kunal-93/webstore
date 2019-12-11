@@ -378,7 +378,7 @@ const getProductAsHTML = (product) => {
     return `
     <article class="product">
         <header class="bottom-border">
-            <div class="product-image"><img src=${settings.imagePath + product.image} alt="Product Image"><div>
+            <div class="product-image-container"><img class="product-image" src=${settings.imagePath + product.image} alt="Product Image"><div>
             <div class="product-header-grid">
                 ${getProductStatusbyQtyAsHTML(product.quantity)}
                 <div>

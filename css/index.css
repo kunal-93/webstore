@@ -53,9 +53,6 @@ body{
     justify-content: space-evenly;
 }
 .header{
-    /* display: grid; */
-    /* grid-template-columns: 1fr; */
-    /* grid-gap: .1em; */
     position: fixed;
     top: 0;
     left: 0;
@@ -170,13 +167,13 @@ body{
     align-items: center;
     row-gap: .5em;
 }
-.product-image{
-    display: inline-block;
-    width: 100%;
-    max-width: 100%;
+.product-image-container{
     text-align:center;
-    margin-left: auto;
-    margin-right: auto;
+}
+.product-image{
+    max-height: 30vh;
+    max-width: 100%;
+    margin: 1em;
 }
 .product h3{
     font-size: 1.8em;
