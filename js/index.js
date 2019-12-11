@@ -98,7 +98,7 @@ let productList =  [
     {
         "id" : 7,
         "name" : "Galaxy A10",
-        "image" : "smartphones/product_7/red_main.jpg",
+        "image" : "smartphones/Product_7/red_main.jpg",
         "description" : ['Display: 16.21cm (6.4") FHD+ Infinity-U Super AMOLED Display', "Dual SIM 6.5''HD+ Snapdragon 450", "Android 9.0", "4GB RAM",
                         "64GB ROM"],
         "price" : 289.99,
@@ -113,7 +113,7 @@ let productList =  [
     {
         "id" : 8,
         "name" : "Galaxy S8",
-        "image" : "smartphones/product_8/black_main.jpg",
+        "image" : "smartphones/Product_8/black_main.jpg",
         "description" : ['Display: 16.21cm (5.8")', "Snapdragon 450", "Android 9.0", "4GB RAM",
                         "64GB ROM"],
         "price" : 309.99,
@@ -128,7 +128,7 @@ let productList =  [
     {
         "id" : 9,
         "name" : "Galaxy Prime 3 J3",
-        "image" : "smartphones/product_9/black_main.jpg",
+        "image" : "smartphones/Product_9/black_main.jpg",
         "description" : ['Display: 16.21cm (5.8")', "Snapdragon 450", "Android 9.0", "4GB RAM",
                         "64GB ROM"],
         "price" : 399.99,
@@ -143,7 +143,7 @@ let productList =  [
     {
         "id" : 10,
         "name" : "Galaxy S10e",
-        "image" : "smartphones/product_10/black_main.jpg",
+        "image" : "smartphones/Product_10/black_main.jpg",
         "description" : ['Display: 16.21cm (5")', "Snapdragon 450", "Android 8.0", "4GB RAM",
                         "16GB ROM"],
         "price" : 428.99,
@@ -158,7 +158,7 @@ let productList =  [
     {
         "id" : 11,
         "name" : "Notebook 9 Pen",
-        "image" : "laptops/product_1/silver_main.jpg",
+        "image" : "laptops/Product_1/silver_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
                         "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 899.99,
@@ -174,7 +174,7 @@ let productList =  [
     {
         "id" : 12,
         "name" : "Notebook 9 Pen Gaming",
-        "image" : "laptops/product_2/blue_main.jpg",
+        "image" : "laptops/Product_2/blue_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1060 with 6 GB Dedicated Memory", "16 GB, DDR4 SDRAM", "1 TB HDD, 256 GB SSD",
                         "30-day Microsoft Office trial included"],
@@ -191,7 +191,7 @@ let productList =  [
     {
         "id" : 13,
         "name" : "Notebook 9 Pen Pro",
-        "image" : "laptops/product_3/silver_main.jpg",
+        "image" : "laptops/Product_3/silver_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 999.99,
@@ -206,7 +206,7 @@ let productList =  [
     {
         "id" : 14,
         "name" : "Notebook 7 Pen",
-        "image" : "laptops/product_4/silver_main.jpg",
+        "image" : "laptops/Product_4/silver_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 1399.99,
@@ -221,7 +221,7 @@ let productList =  [
     {
         "id" : 15,
         "name" : "Notebook 7 Pen Gaming",
-        "image" : "laptops/product_5/black_main.jpg",
+        "image" : "laptops/Product_5/black_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i5-7400T processor Quad-core 2.40 GHz", "17.3\" Full HD (1920 x 1080) 16:9 Touchscreen",
                         "Intel® HD Graphics 630 shared memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 1099.99,
@@ -236,7 +236,7 @@ let productList =  [
     {
         "id" : 16,
         "name" : "Notebook 7 Pen Pro",
-        "image" : "laptops/product_6/black_main.jpg",
+        "image" : "laptops/Product_6/black_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1060 with 6 GB Dedicated Memory", "16 GB, DDR4 SDRAM", "1 TB HDD, 256 GB SSD",
                         "30-day Microsoft Office trial included"],
@@ -252,7 +252,7 @@ let productList =  [
     {
         "id" : 17,
         "name" : "Notebook Odyssey",
-        "image" : "laptops/product_7/silver_main.jpg",
+        "image" : "laptops/Product_7/silver_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8750H processor Quad-core 2.40 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 1899.99,
@@ -267,7 +267,7 @@ let productList =  [
     {
         "id" : 18,
         "name" : "Notebook Odyssey Gaming",
-        "image" : "laptops/product_8/black_main.jpg",
+        "image" : "laptops/Product_8/black_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i7-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 2060 with 8 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 1999.99,
@@ -282,7 +282,7 @@ let productList =  [
     {
         "id" : 19,
         "name" : "Notebook 5",
-        "image" : "laptops/product_9/white_main.jpg",
+        "image" : "laptops/Product_9/white_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 749.99,
@@ -297,7 +297,7 @@ let productList =  [
     {
         "id" : 20,
         "name" : "Notebook Flash",
-        "image" : "laptops/product_10/grey_main.jpg",
+        "image" : "laptops/Product_10/grey_main.jpg",
         "description" : ["Windows 10 Home", "Intel® Core™ i5-8300H processor Quad-core 2.30 GHz", "15.6\" Full HD (1920 x 1080) 16:9",
                         "NVIDIA® GeForce® GTX 1050 with 4 GB Dedicated Memory", "8 GB, DDR4 SDRAM", "1 TB HDD"],
         "price" : 699.99,
