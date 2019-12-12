@@ -183,7 +183,7 @@ let productList =  [
         "category" : "laptop",
         "type" : "Gaming",
         "RAM" : [8, 12, 16],
-        "color" : ["blue", "Black"],
+        "color" : ["blue"],
         "rating": 4.7,
         "ratingCount" : 10,
         "selectedColorIndex": 0
@@ -571,13 +571,14 @@ const sortProducts = (criteria) => {
 
 
 const toggleFilterForm = () => {
-    const filterPanelStyle = document.getElementById("filterPanel").style;
-    if(filterPanelStyle.display == "grid"){
-        filterPanelStyle.display = "none";
-    }
-    else{
-        filterPanelStyle.display = "grid";
-    }
+    document.getElementById("filterPanel").classList.toggle('open');
+    // const filterPanelStyle = document.getElementById("filterPanel").style;
+    // if(filterPanelStyle.display == "grid"){
+    //     filterPanelStyle.display = "none";
+    // }
+    // else{
+    //     filterPanelStyle.display = "grid";
+    // }
 }
 
 /*
@@ -692,6 +693,8 @@ const searchProducts = (searchString) => {
         if(product.name.toLowerCase().includes(searchString))
             return true;
         if(product.category.toLowerCase().includes(searchString))
+            return true;
+        if(product.image.toLowerCase().includes(searchString))
             return true;
         
         // Match if color of the product matches
@@ -892,6 +895,45 @@ window.addEventListener("load", () => {
         sortProducts(sortCriteria);
 
         renderProducts();
-    });      
+    });  
+    
+    // document.getElementById("smartPhonesTab").addEventListener('click', () =>{
+    //     searchProducts("smartphones");
+    //     renderProducts();
+    // });
+
+    // document.getElementById("laptopsTab").addEventListener('click', () =>{
+    //     searchProducts("laptops");
+    //     renderProducts();
+    // });
+
+    // document.getElementById("smartPhonesMenuOption").addEventListener('click', () =>{
+    //     searchProducts("smartphones");
+    //     renderProducts();
+    // });
+
+    // document.getElementById("laptopsMenuOption").addEventListener('click', () =>{
+    //     searchProducts("laptops");
+    //     renderProducts();
+    // });
+
+    const smartPhonesSelector = document.querySelectorAll("#smartPhonesTab");
+    for(let i=0; i<smartPhonesSelector.length; i++){
+        smartPhonesSelector[i].addEventListener("click", () =>{
+            searchProducts("smartphones");
+            renderProducts();
+        });
+    }
+
+    const laptopsSelector = document.querySelectorAll("#laptopsTab");
+    for(let i=0; i<laptopsSelector.length; i++){
+        laptopsSelector[i].addEventListener("click", () =>{
+            searchProducts("laptops");
+            renderProducts();
+        });
+    }
+
+
+
     
 });  

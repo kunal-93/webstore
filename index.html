@@ -17,7 +17,9 @@
     <header class="header">
         <nav class="header-nav">
           <ul class="header-nav-top-row">
-            <li><button type="button" class="transparent-button" id="menuButton"><span class="material-icons">menu</span></button></li>
+            <li><button type="button" class="menu-button transparent-button" id="menuButton"><span class="material-icons">menu</span></button></li>
+            <li class="smartphone-tab-container"><button type="button" class="transparent-button" id="smartPhonesTab">SmartPhones</button></li>
+            <li class="laptop-tab-container"><button type="button" class="transparent-button" id="laptopsTab">Laptops</button></li>
             <li class="logo"><a href="index.html"><img src="img/logo.svg" alt="HTML Logo"></a></li>
             <form class="header-nav-form">
               <ul>
@@ -28,15 +30,15 @@
             </form>
           </ul>
           <div class="search-container" id="searchContainer">
-            <input type="search" id="searchBar">
+            <input type="search" id="searchBar" placeholder="search products">
             <button type="button" class="transparent-button" id="searchButton">Search</button>
           </div>
           
         </nav>
       <nav aria-label="Primary">
         <ul class="header-menu" id="headerMenu">
-          <li><a href="#">Laptops</a>
-          <li><a href="#">SmartPhones</a></li>
+          <li class="bottom-border"><a href="#" id="laptopsTab">Laptops</a>
+          <li><a href="#" id="smartPhonesTab">SmartPhones</a></li>
         </ul>
       </nav>
     </header>
@@ -45,7 +47,7 @@
       <header>
         <div class="product-image-container"><img class="product-image" src="img/S10Banner.gif" alt="s10 Banner"></div>
         <div class="main-header">
-          <button type="button" class="transparent-button-grid" id="filterButton"><span>Filters</span><span class="material-icons">filter_list</span></button>
+          <button type="button" class="filter-button transparent-button-grid" id="filterButton"><span>Filters</span><span class="material-icons">filter_list</span></button>
           <label for="sortOrder">
             <select name="sort" id="sortOrder">
               <option value="none" disabled selected>-- Sort by --</option>
@@ -72,8 +74,8 @@
           </fieldset>
           <fieldset>
             <legend>Price Range</legend>
-            <div class="margin-bottom space-even"><span class="margin-right">Minimum Price</span><input type="number" id="MinPriceFilter"></div>
-            <div class="space-even"><span class="margin-right">Maximum Price</span><input type="number" id="MaxPriceFilter"></div>
+            <div class="margin-bottom"><span class="margin-right">Min Price</span><input type="number" id="MinPriceFilter" placeholder="0"></div>
+            <div><span class="margin-right">Max Price</span><input type="number" id="MaxPriceFilter" placeholder="999999999"></div>
           </fieldset>
           <fieldset>
             <legend>Ratings (at least)</legend>
