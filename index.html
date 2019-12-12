@@ -3,25 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebStore</title>
+    <title>Samsung WebStore</title>
     <meta name="description" content="A webstore to choose from a variety of Electronics products">
     <meta name="author" content="Kunal Dhawan">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/bf16eed826.js" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
   </head>
   <body>
     <!-- add extended on clicking search button -->
     <header class="header">
-     <div>
         <nav class="header-nav">
           <ul class="header-nav-top-row">
             <li><button type="button" class="transparent-button" id="menuButton"><span class="material-icons">menu</span></button></li>
             <li class="logo"><a href="index.html"><img src="img/logo.svg" alt="HTML Logo"></a></li>
             <form class="header-nav-form">
               <ul>
-                <li><button type="button" class="transparent-button"><span class="material-icons">shopping_cart</span></button></li>
+                <li><button type="button" class="transparent-button"><span class="material-icons">shopping_cart</span></button><span id="itemsInCart"></span></li>
                 <li><button type="button" class="transparent-button" id="searchIcon"><span class="material-icons">search</span></button></li>
                 <li><button type="button" class="transparent-button"><span class="material-icons">account_circle</span></button></li>
               </ul>
@@ -33,7 +33,6 @@
           </div>
           
         </nav>
-      </div>
       <nav aria-label="Primary">
         <ul class="header-menu" id="headerMenu">
           <li><a href="#">Laptops</a>
@@ -111,7 +110,7 @@
 
       <section>
         <h2 id="productsCount"></h2>
-        <div id="products">
+        <div id="products" class="products-section">
         </div>
       </section>
 
@@ -126,20 +125,23 @@
       </footer>
     </main>
 
-    <footer>
-      <p>&copy; Copyright, 1991.</p>
-      <nav aria-label="Legal">
-        <ul>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Accessibility Policy</a></li>
+    <footer class="footer">
+      <p>&copy; Copyright, 2019 | Kunal Dhawan</p>
+      <div class="footer-style">
+        <ul class="footer-icons">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
         </ul>
-      </nav>
-      <ul>
-        <li><a href="#"><span class="material-icons">face</span> Facebook</a></li>
-        <li><a href="#"><span class="material-icons">camera_alt</span> Instagram</a></li>
-        <li><a href="#"><span class="material-icons">alternate_email</span> Twitter</a></li>
-      </ul>
+        <nav aria-label="Legal">
+          <ul class="footer-legals">
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Accessibility Policy</a></li>
+          </ul>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>

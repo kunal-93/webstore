@@ -313,7 +313,7 @@ let productList =  [
     
 ]
 let currentPage = 1;
-let productsPerPage = 5;
+let productsPerPage = 8;
 let filteredProducts = productList.slice();
 const laptopAltImageList = [`main`, `back`, `angle`];
 const smartphoneAltImageList = [`main`, `front`, `back`, `side`];
@@ -448,7 +448,9 @@ const getProductAsHTML = product => {
                 ${getProductAltImagesAsHTML(product)}
             </ul>
             <div class="product-header-grid">
-                ${getProductStatusbyQtyAsHTML(product.quantity)}
+                <div id="${product.id}productStatus">
+                    ${getProductStatusbyQtyAsHTML(product.quantity)}
+                </div>
                 <div>
                     <p>User rating ${product.rating} (${product.ratingCount})</p>
                     <div>${getProductRatingAsHTML(product.rating)}</div>
@@ -472,11 +474,11 @@ const getProductAsHTML = product => {
                 ${product.description.map(x => `<li>${x}</li>`).join('')}
             </ul>
         </main>
-        <footer class="bottom-border">
+        <footer>
             <form class="product-footer-form">
                 <data class="price" value="$${product.price.toFixed(2)}"><del>$${(product.price*(Math.random()+1)).toFixed(2)}</del><ins class="offer-price">$${product.price}</ins></data>
-                <input type="button" class="buy-button" value="Buy Now" ${isBuyDisabled(product.quantity)}>
-                <button type="button" class="transparent-button align-right"><span class="material-icons add-cart">add_shopping_cart</span></button>
+                <input type="button" class="buy-button" id="${product.id}buyButton" value="Buy Now" ${isBuyDisabled(product.quantity)}>
+                <button type="button" name="${product.id}_addCart" class="transparent-button align-right"><span class="material-icons add-cart" name="${product.id}_addCart" id="${product.id}addToCartIcon">add_shopping_cart</span></button>
             </form>
         </footer>
     </article>`
@@ -743,6 +745,43 @@ const updateProductSelectedColor = (productID, newColor) => {
     });
 }
 
+/*
+    name: updateCartAndProductQuantity
+    param:
+        productID
+    return: none
+    description: updates counter on cart icon and product quantity
+*/
+const updateCartAndProductQuantity = productID =>{
+    
+    const cartCounterElement = document.getElementById("itemsInCart");
+    const currentValue = cartCounterElement.innerHTML.length <= 0 ? 0: parseInt(cartCounterElement.innerHTML);
+    
+
+    //Reduce the product count
+    filteredProducts.forEach(product => {
+        if(product.id == productID && product.quantity>0){
+            // increase the items in cart at header
+            cartCounterElement.innerHTML =  currentValue + 1;
+
+            product.quantity = Math.max(product.quantity-1, 0);
+            //Update product in stock status
+            document.getElementById(`${productID}productStatus`).innerHTML = getProductStatusbyQtyAsHTML(product.quantity);
+
+            //disable buy now and add to cart if quantity is 0
+            if(product.quantity == 0){
+                const buyButton = document.getElementById(`${productID}buyButton`);
+                buyButton.setAttribute("disabled", true);
+                buyButton.value = "Out Of Stock";
+                buyButton.className += " disabled-button";
+                
+                const addToCartIcon = document.getElementById(`${productID}addToCartIcon`);
+                addToCartIcon.className += " disabled-icon";
+            }
+        }
+    });
+}
+
 window.addEventListener("load", () => {
     
     /** Adding listeners to Header Elements*/
@@ -772,6 +811,7 @@ window.addEventListener("load", () => {
 
     // Adding event listener to product parent to handle clicks on swatches and alt images
     document.getElementById("products").addEventListener("click", event => {
+        
         if(typeof(event.target.name) == "undefined")
             return;
 
@@ -787,10 +827,20 @@ window.addEventListener("load", () => {
 
         //update product Image
         if(event.target.name.endsWith("_altImage")){
-            console.log(event.target.src);
             const productId = event.target.name.split('_')[0];
             document.getElementById(`${productId}mainImage`).src = event.target.src;
         }
+
+        
+        //add to cart functionality
+        if(event.target.name.endsWith("_addCart")){
+            // THis does not work with clicking on icon since span gets triggered over button.
+            const productId = event.target.name.split('_')[0];
+
+            updateCartAndProductQuantity(productId);
+        }
+
+        
 
     });
     
