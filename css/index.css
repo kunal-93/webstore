@@ -132,7 +132,7 @@ body{
     transform: translateX(0em);
 }
 .main{
-    margin: 3em 1em 1em 1em;
+    margin: 3em 1.2em 1em 1.2em;
 }
 
 .header.extended + .main {
