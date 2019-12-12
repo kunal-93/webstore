@@ -313,7 +313,7 @@ let productList =  [
     
 ]
 let currentPage = 1;
-let productsPerPage = 8;
+let productsPerPage = 6;
 let filteredProducts = productList.slice();
 const laptopAltImageList = [`main`, `back`, `angle`];
 const smartphoneAltImageList = [`main`, `front`, `back`, `side`];
@@ -723,7 +723,7 @@ const renderProducts = (filteredProducts) => {
     calculateAndShowNumberOfPages(productsPerPage);
 
     // call to show products on page 1 according to filtered product list
-    showProductsByPage(currentPage, productsPerPage);
+    showProductsByPage(1, productsPerPage);
 }
 
 const updateProductSelectedColor = (productID, newColor) => {
