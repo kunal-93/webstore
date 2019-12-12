@@ -471,4 +471,7 @@ body{
         margin: 0 15em 0 0;
         text-align: left;
     }
+    .header-menu.open {
+        transform: translateX(-100%);
+    }
 }
