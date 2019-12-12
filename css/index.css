@@ -424,13 +424,13 @@ body{
     .filter-panel{
         top: 4em;
         z-index: 5;
-        width: 14em;
+        width: 15em;
         transform: translateX(0em);
         /* height: 100%; */
     }
 
     .main{
-        margin-left: 15em;
+        margin-left: 16em;
     }
 
     .main-header{
