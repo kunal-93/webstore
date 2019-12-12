@@ -422,6 +422,7 @@ body{
     }
 
     .filter-panel{
+        position: fixed;
         top: 4em;
         z-index: 5;
         width: 15em;
