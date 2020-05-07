@@ -1,4 +1,3 @@
-**WDDM: Final Composite Project**
 # Web "Store" Application Interface
 
 ---
@@ -13,6 +12,5 @@ Icons: https://fontawesome.com/ and https://material.io/resources/icons/
 Product Images: Google Images
 
 ##Refernces
-1. WDDM Repo - Fall 2019
 2. https://developer.mozilla.org/en-US/docs/Web/JavaScript
 Design inspiration: Samsung.com and Acer.com
